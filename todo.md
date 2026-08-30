@@ -84,3 +84,11 @@
 - [x] Add abstract global-reach animation and interactive business journey timeline without invented destinations.
 - [x] Add once-only verified count-up behavior and enquiry loading/success states.
 - [x] Validate desktop/mobile responsiveness, reduced motion, and production build before checkpoint.
+
+## Full attached website upgrade
+
+- [x] Translate the attached requirements into the existing e_commerce.hub brand and content model.
+- [x] Upgrade core structure, typography, responsive layout, navigation, contact, FAQ, and honest project/service presentation.
+- [x] Implement reusable motion, journey, trust, card, form, and premium interaction systems.
+- [x] Add SEO, accessibility, performance, mobile, and no-fabrication safeguards.
+- [x] Validate the complete experience across requested responsive sizes and save a checkpoint.
