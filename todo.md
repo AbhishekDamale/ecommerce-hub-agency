@@ -52,3 +52,11 @@
 - [x] Make both founder cards clickable and open detailed profile windows.
 - [x] Add mailto and telephone contact actions with responsive layout.
 - [x] Verify the profile windows on desktop/mobile and save a checkpoint.
+
+## Premium corporate redesign
+
+- [x] Refine the hero hierarchy, CTA messaging, and background motion.
+- [x] Upgrade sticky navigation, typography, spacing, buttons, and section proportions.
+- [x] Polish service, project, and founder cards with consistent hover states.
+- [x] Verify restrained scroll animations and responsive behavior on desktop/mobile.
+- [x] Save a new checkpoint after the build and visual review.

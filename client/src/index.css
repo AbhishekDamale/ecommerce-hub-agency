@@ -610,3 +610,35 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
   .founder-detail-copy h2 { font-size: clamp(2.7rem, 14vw, 4.3rem); }
   .founder-detail-actions .button { width: 100%; justify-content: center; }
 }
+
+
+/* Premium corporate pass: clean hierarchy, restrained movement, and confident interaction cues. */
+.site-nav button.is-active { color: var(--coral); }
+.site-nav button.is-active::after { transform: scaleX(1); }
+.project-card { transition: transform 280ms var(--ease-out); }
+.project-card:hover { transform: translateY(-5px); }
+.project-image, .project-abstract, .founder-photo, .founder-detail-photo { border-radius: 4px; }
+.service-row, .project-card, .founder-card { will-change: transform; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-image-wrap img { animation: hero-drift 14s ease-in-out infinite alternate; }
+  .hero-visual-stamp { animation: stamp-float 4.6s ease-in-out infinite alternate; }
+}
+@keyframes hero-drift { from { transform: scale(1.02); } to { transform: scale(1.07) translate3d(-5px, -3px, 0); } }
+@keyframes stamp-float { from { transform: translateY(0) rotate(-2deg); } to { transform: translateY(-4px) rotate(-2deg); } }
+@media (max-width: 720px) {
+  .project-card:hover { transform: translateY(-3px); }
+}
+
+
+/* Case-chapter polish: distinct accents without turning the portfolio into a repeated placeholder grid. */
+.project-pachorekar-jewellers .project-abstract { background: #f4eee3; }
+.project-pachorekar-jewellers .abstract-block, .project-pachorekar-jewellers .abstract-line { color: var(--coral); }
+.project-pachorekar-jewellers .abstract-circle { border-color: var(--ink); }
+.project-angad-international .project-abstract { background: #dce9e0; }
+.project-angad-international .abstract-block, .project-angad-international .abstract-line { color: #295b45; }
+.project-angad-international .abstract-circle { border-color: var(--coral); }
+.project-sahyadri-global-traders .project-abstract { background: #e6edf0; }
+.project-sahyadri-global-traders .abstract-block, .project-sahyadri-global-traders .abstract-line { color: var(--blue); }
+.project-sahyadri-global-traders .abstract-circle { border-color: var(--coral); }
+.founder-entry { opacity: 0.7; border-color: rgba(16,35,62,0.28); padding: 7px 9px; font-size: 8px; }
+.founder-entry:hover { opacity: 1; }
