@@ -60,3 +60,12 @@
 - [x] Polish service, project, and founder cards with consistent hover states.
 - [x] Verify restrained scroll animations and responsive behavior on desktop/mobile.
 - [x] Save a new checkpoint after the build and visual review.
+
+## Trust, contact, and performance expansion
+
+- [x] Add honest trust signals without inventing statistics, ratings, certifications, awards, or testimonials.
+- [x] Strengthen the About section with an editorial company story and supporting visual treatment.
+- [x] Add a professional enquiry form with success feedback and visible email, call, WhatsApp, and location options where details are available.
+- [x] Redesign the footer with quick links, services, contact details, social links, and CTA.
+- [x] Add back-to-top behavior, scroll progress, subtle motion, and reduced-motion safeguards.
+- [x] Validate responsive layout, form states, and production build, then save a checkpoint.

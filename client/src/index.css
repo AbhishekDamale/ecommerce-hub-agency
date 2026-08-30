@@ -642,3 +642,87 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .project-sahyadri-global-traders .abstract-circle { border-color: var(--coral); }
 .founder-entry { opacity: 0.7; border-color: rgba(16,35,62,0.28); padding: 7px 9px; font-size: 8px; }
 .founder-entry:hover { opacity: 1; }
+
+
+/* Trust and lead-generation expansion: honest proof, calm form surfaces, and editorial contact hierarchy. */
+.trust-section { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(40px, 8vw, 130px); align-items: end; padding: 112px clamp(22px, 8vw, 132px); background: #f0e8dc; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.trust-heading h2 { margin: 18px 0 0; color: var(--ink); font-family: "Sora", sans-serif; font-size: clamp(3rem, 5.8vw, 6.2rem); font-weight: 700; letter-spacing: -0.11em; line-height: 0.86; }
+.trust-heading h2 em { color: var(--coral); }
+.trust-heading > p:not(.eyebrow) { max-width: 410px; margin: 28px 0 0; color: var(--ink-soft); font-size: 16px; line-height: 1.65; }
+.trust-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.trust-stat { min-height: 164px; display: flex; flex-direction: column; justify-content: space-between; padding: 18px; border-top: 2px solid var(--ink); background: var(--paper); }
+.trust-stat:nth-child(2) { border-top-color: var(--coral); }
+.trust-stat:nth-child(3) { border-top-color: var(--blue); }
+.trust-stat strong { color: var(--ink); font-family: "Sora", sans-serif; font-size: clamp(3rem, 5vw, 5.2rem); font-weight: 700; letter-spacing: -0.11em; line-height: 0.8; }
+.trust-stat:nth-child(2) strong { color: var(--coral); }
+.trust-stat:nth-child(3) strong { color: var(--blue); }
+.trust-stat span { max-width: 120px; color: var(--ink-soft); font-family: "Sora", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; line-height: 1.35; text-transform: uppercase; }
+.about-section { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(44px, 9vw, 145px); align-items: center; position: relative; padding: 132px clamp(22px, 8vw, 132px); background: var(--paper); border-top: 1px solid var(--line); }
+.about-visual { min-height: 470px; position: relative; }
+.about-visual-main { width: 63%; height: 420px; overflow: hidden; border: 1px solid var(--ink); background: var(--coral); transform: rotate(-2deg); box-shadow: 11px 11px 0 var(--ink); }
+.about-visual-main img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; filter: saturate(0.86); }
+.about-visual-side { width: 42%; height: 248px; position: absolute; right: 0; bottom: 0; overflow: hidden; border: 1px solid var(--ink); background: var(--blue); transform: rotate(3deg); box-shadow: 8px 8px 0 var(--coral); }
+.about-visual-side img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; filter: saturate(0.75) contrast(1.04); }
+.about-visual-side span { position: absolute; left: 10px; bottom: 10px; padding: 6px 8px; color: var(--ink); background: var(--chartreuse); font-family: "Sora", sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; }
+.about-visual-tag { position: absolute; top: 18px; right: 4%; padding: 9px 12px; color: var(--ink); background: var(--chartreuse); font-family: "Sora", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; line-height: 1.3; text-transform: uppercase; transform: rotate(4deg); }
+.about-copy h2 { margin: 18px 0 0; color: var(--ink); font-family: "Sora", sans-serif; font-size: clamp(3rem, 6vw, 6.9rem); font-weight: 700; letter-spacing: -0.11em; line-height: 0.84; }
+.about-copy h2 em { color: var(--blue); }
+.about-copy > p:not(.eyebrow) { max-width: 460px; margin: 31px 0 0; color: var(--ink-soft); font-size: 17px; line-height: 1.65; }
+.about-points { display: grid; gap: 11px; margin: 31px 0 34px; padding-top: 15px; border-top: 1px solid var(--line); }
+.about-points span { display: flex; align-items: center; gap: 12px; color: var(--ink); font-family: "Sora", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.about-points b { color: var(--coral); font-size: 10px; }
+.contact-section-upgraded { grid-template-columns: minmax(0, 0.9fr) minmax(340px, 0.7fr); gap: clamp(30px, 7vw, 100px); }
+.contact-options { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 29px; }
+.contact-options a, .contact-options span { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-family: "Sora", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.contact-options a { border-bottom: 1px solid var(--coral); padding-bottom: 4px; }
+.contact-options a:hover { color: var(--coral); }
+.enquiry-form { display: grid; gap: 15px; padding: clamp(24px, 4vw, 42px); border: 1px solid var(--ink); background: rgba(245,240,232,0.95); box-shadow: 9px 9px 0 var(--ink); }
+.enquiry-form label { display: grid; gap: 7px; color: var(--ink); font-family: "Sora", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.enquiry-form input, .enquiry-form textarea { width: 100%; border: 1px solid rgba(16,35,62,0.28); padding: 13px 14px; outline: none; color: var(--ink); background: var(--paper); font: 14px/1.4 "Manrope", sans-serif; transition: border-color 160ms ease, box-shadow 160ms ease; }
+.enquiry-form textarea { min-height: 110px; resize: vertical; }
+.enquiry-form input:focus, .enquiry-form textarea:focus { border-color: var(--coral); box-shadow: 3px 3px 0 var(--coral); }
+.form-kicker { color: var(--coral); font-family: "Sora", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.form-two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.form-success { display: flex; align-items: flex-start; gap: 8px; color: var(--ink); font-size: 12px; line-height: 1.45; }
+.form-success svg { flex: 0 0 auto; color: var(--coral); margin-top: 2px; }
+.footer-directory { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; padding: 24px 0; border-top: 1px solid var(--line-light); border-bottom: 1px solid var(--line-light); }
+.footer-directory > div { display: grid; align-content: start; gap: 8px; }
+.footer-directory-label { margin-bottom: 6px; color: var(--coral); font-family: "Sora", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.footer-directory button, .footer-directory span:not(.footer-directory-label), .footer-directory a { width: fit-content; color: rgba(245,240,232,0.7); font-size: 12px; line-height: 1.45; }
+.footer-directory button:hover, .footer-directory a:hover { color: var(--chartreuse); }
+.scroll-progress { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; height: 3px; pointer-events: none; }
+.scroll-progress span { display: block; height: 100%; background: var(--coral); transition: width 180ms ease-out; }
+.back-to-top { display: grid; place-items: center; position: fixed; right: 22px; bottom: 22px; z-index: 40; width: 42px; height: 42px; border: 1px solid var(--ink); color: var(--paper); background: var(--ink); box-shadow: 4px 4px 0 var(--coral); transform: rotate(-45deg); transition: transform 180ms var(--ease-out), background-color 180ms ease; }
+.back-to-top svg { transform: rotate(45deg); }
+.back-to-top:hover { background: var(--coral); transform: rotate(-45deg) translateY(-3px); }
+@media (max-width: 980px) {
+  .trust-section, .about-section { grid-template-columns: 1fr; gap: 54px; }
+  .trust-heading > p:not(.eyebrow) { max-width: 560px; }
+  .about-visual { max-width: 650px; }
+  .contact-section-upgraded { grid-template-columns: 1fr; }
+  .enquiry-form { max-width: 720px; }
+}
+@media (max-width: 720px) {
+  .trust-section, .about-section { padding: 82px 22px; }
+  .trust-stats { grid-template-columns: 1fr; }
+  .trust-stat { min-height: 126px; }
+  .about-visual { min-height: 360px; }
+  .about-visual-main { width: 70%; height: 330px; }
+  .about-visual-side { width: 46%; height: 190px; }
+  .about-visual-tag { right: 0; font-size: 8px; }
+  .form-two-col { grid-template-columns: 1fr; }
+  .contact-options { display: grid; }
+  .contact-options a, .contact-options span { width: fit-content; }
+  .footer-directory { grid-template-columns: 1fr 1fr; }
+  .footer-directory > div:last-child { grid-column: 1 / -1; }
+}
+
+
+/* Distinct case-study cues: each client chapter gets its own visual annotation without fabricating imagery or results. */
+.project-pachorekar-jewellers .project-abstract::before { content: "Catalogue / appointment / care"; position: absolute; left: 18px; top: 19px; color: var(--ink); font: 700 9px/1.3 "Sora", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+.project-angad-international .project-abstract::before { content: "Produce / spices / export"; position: absolute; left: 18px; top: 19px; color: #295b45; font: 700 9px/1.3 "Sora", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+.project-sahyadri-global-traders .project-abstract::before { content: "Quality / logistics / inquiry"; position: absolute; left: 18px; top: 19px; color: var(--ink); font: 700 9px/1.3 "Sora", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+.project-pachorekar-jewellers .abstract-block { border-radius: 2px; }
+.project-angad-international .abstract-block { transform: rotate(12deg); }
+.project-sahyadri-global-traders .abstract-block { transform: rotate(-7deg); }
+.agency-name strong { letter-spacing: -0.07em; }
