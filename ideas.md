@@ -99,3 +99,9 @@ Because this remains a frontend-only static project, the founder gate is a local
 The MusiTech reference suggests a clear digital-agency information architecture: a compact navigation, an immediately legible hero with a direct CTA, visible capability highlights, a dedicated services block, and trust-building proof sections. e_commerce.hub will reinterpret those patterns using its own paper-and-ink editorial identity rather than copying MusiTech’s dark gradient aesthetic, copy, testimonials, imagery, or brand elements.
 
 The redesign direction is a **tactile digital studio**: warm ivory foundation, ink navy hero contrast, coral as the action color, cobalt for structured service cards, and chartreuse used only for small emphasis. The page flow will be hero → quick capability signals → services → method → selected work → founders → contact, with clearer hierarchy and stronger entry points for service discovery.
+
+## Premium animation and professionalism contract
+
+The attached specification is adopted as a one-by-one enhancement plan: cinematic but short hero entrance, smart sticky-navbar transition, reusable scroll reveals, restrained global-reach storytelling, process progression, premium card behavior, count-ups only for verified numbers, honest testimonial handling, subtle CTA feedback, desktop-only cursor only if it does not interfere, lightweight parallax, scroll progress, back-to-top, responsive reductions, and SEO/performance safeguards.
+
+The site remains an agency website, not an export catalog. Because no export countries, testimonials, ratings, awards, certifications, experience figures, customer totals, or backend form service were provided, those areas remain honest placeholders or are omitted until verified. The current contact flow uses a mailto handoff, and any visual global-reach treatment must remain abstract unless the agency supplies destinations.

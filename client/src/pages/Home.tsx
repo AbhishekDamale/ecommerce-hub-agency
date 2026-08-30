@@ -9,6 +9,7 @@ import {
   ArrowUpRight,
   Check,
   CircleArrowOutUpRight,
+  Loader2,
   Facebook,
   Mail,
   MapPin,
@@ -76,6 +77,19 @@ const steps = [
   { index: "C", title: "Move the number", copy: "We focus on the next meaningful action — the click, enquiry, sale, or step forward that keeps the business moving." },
 ];
 
+const journeySteps = [
+  { index: "01", label: "Brief", copy: "We learn what needs to move." },
+  { index: "02", label: "Direction", copy: "We find the clearest signal." },
+  { index: "03", label: "Build", copy: "We make the system useful." },
+  { index: "04", label: "Launch", copy: "We put the next move in motion." },
+];
+
+const globalSignals = [
+  { label: "Origin", detail: "Local context", x: "25%", y: "67%" },
+  { label: "Reach", detail: "Digital touchpoints", x: "63%", y: "37%" },
+  { label: "Next", detail: "A wider audience", x: "82%", y: "58%" },
+];
+
 const blankDraft: ProjectDraft = { title: "", type: "", detail: "", image: null, tone: "project-coral", tag: "New project", link: "", published: true };
 
 function scrollToSection(id: string) { document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" }); }
@@ -92,7 +106,11 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("services");
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [formStatus, setFormStatus] = useState<"idle" | "success">("idle");
+  const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [trustVisible, setTrustVisible] = useState(false);
+  const [trustCounts, setTrustCounts] = useState([0, 0, 0]);
+  const [journeyVisible, setJourneyVisible] = useState(false);
+  const [journeyStep, setJourneyStep] = useState(0);
   const [projects, setProjects] = useState<Project[]>(defaultProjects);
   const [founderOpen, setFounderOpen] = useState(false);
   const [accessOpen, setAccessOpen] = useState(false);
@@ -115,10 +133,24 @@ export default function Home() {
     window.addEventListener("scroll", onScroll, { passive: true });
     const revealObserver = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add("is-visible")), { threshold: 0.14 });
     document.querySelectorAll(".reveal-on-scroll").forEach((element) => revealObserver.observe(element));
-    const sectionObserver = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && setActiveSection(entry.target.id)), { rootMargin: "-28% 0px -58%", threshold: 0 });
+    const sectionObserver = new IntersectionObserver((entries) => entries.forEach((entry) => { if (!entry.isIntersecting) return; const navSection = entry.target.id === "work" ? "work" : entry.target.id === "about" ? "about" : entry.target.id === "contact" ? "contact" : "services"; setActiveSection(navSection); if (entry.target.id === "trust") setTrustVisible(true); if (entry.target.id === "journey") setJourneyVisible(true); }), { rootMargin: "-28% 0px -58%", threshold: 0 });
     document.querySelectorAll("main section[id]").forEach((section) => sectionObserver.observe(section));
     return () => { window.removeEventListener("scroll", onScroll); revealObserver.disconnect(); sectionObserver.disconnect(); };
   }, []);
+
+  useEffect(() => {
+    if (!trustVisible) return;
+    const targets = [projects.filter((project) => project.published && project.link).length, founderProfiles.length, services.length];
+    const started = performance.now();
+    const duration = 680;
+    const timer = window.setInterval(() => {
+      const progress = Math.min(1, (performance.now() - started) / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setTrustCounts(targets.map((target) => Math.round(target * eased)));
+      if (progress === 1) window.clearInterval(timer);
+    }, 40);
+    return () => window.clearInterval(timer);
+  }, [trustVisible, projects]);
 
   const handleNav = (id: string) => { setMenuOpen(false); scrollToSection(id); };
   const publishedProjects = projects.filter((project) => project.published);
@@ -128,8 +160,8 @@ export default function Home() {
     const form = new FormData(event.currentTarget);
     const subject = `New e_commerce.hub enquiry from ${String(form.get("name") || "a new lead")}`;
     const body = [`Name: ${form.get("name") || ""}`, `Phone: ${form.get("phone") || ""}`, `Email: ${form.get("email") || ""}`, `Requirement: ${form.get("message") || ""}`].join("\\n");
-    setFormStatus("success");
-    window.setTimeout(() => { window.location.href = `mailto:ecommercehub54@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; }, 360);
+    setFormStatus("loading");
+    window.setTimeout(() => { setFormStatus("success"); window.location.href = `mailto:ecommercehub54@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; }, 480);
   };
 
   const openFounderAccess = () => { setAccessCode(""); setAccessError(""); setAccessOpen(true); };
@@ -186,7 +218,11 @@ export default function Home() {
 
         <section className="signal-section" aria-labelledby="signal-title"><div className="signal-badge"><Sparkles size={16} /> the e_commerce.hub method</div><span className="section-stamp signal-stamp">Ledger / 02</span><div className="signal-heading"><p className="eyebrow eyebrow-light"><span>02</span> How we work</p><h2 id="signal-title">From <em>signal</em><br />to momentum.</h2></div><div className="signal-steps">{steps.map((step) => <article className="signal-step reveal-on-scroll" key={step.index}><div className="step-top"><span>{step.index}</span><ArrowUpRight size={17} /></div><h3>{step.title}</h3><p>{step.copy}</p></article>)}</div><div className="signal-footer"><span>Small team. Close attention.</span><span>Made for businesses with somewhere to go <ArrowUpRight size={15} /></span></div></section>
 
-        <section className="trust-section" aria-labelledby="trust-title"><div className="trust-heading"><p className="eyebrow"><span>02A</span> The signal, honestly</p><h2 id="trust-title">Proof you can<br /><em>actually inspect.</em></h2><p>We keep the proof close to the work. No inflated numbers, borrowed testimonials, or vague promises — just live project links, a small senior team, and a clear way to start.</p></div><div className="trust-stats"><article className="trust-stat reveal-on-scroll"><strong>{String(verifiedProjects.length).padStart(2, "0")}</strong><span>Verified project links</span></article><article className="trust-stat reveal-on-scroll"><strong>{String(founderProfiles.length).padStart(2, "0")}</strong><span>Founders at the table</span></article><article className="trust-stat reveal-on-scroll"><strong>{String(services.length).padStart(2, "0")}</strong><span>Core service lines</span></article></div></section>
+        <section id="trust" className="trust-section" aria-labelledby="trust-title"><div className="trust-heading"><p className="eyebrow"><span>02A</span> The signal, honestly</p><h2 id="trust-title">Proof you can<br /><em>actually inspect.</em></h2><p>We keep the proof close to the work. No inflated numbers, borrowed testimonials, or vague promises — just live project links, a small senior team, and a clear way to start.</p></div><div className="trust-stats"><article className="trust-stat reveal-on-scroll"><strong>{String(trustCounts[0]).padStart(2, "0")}</strong><span>Verified project links</span></article><article className="trust-stat reveal-on-scroll"><strong>{String(trustCounts[1]).padStart(2, "0")}</strong><span>Founders at the table</span></article><article className="trust-stat reveal-on-scroll"><strong>{String(trustCounts[2]).padStart(2, "0")}</strong><span>Core service lines</span></article></div></section>
+
+        <section id="global" className="global-section" aria-labelledby="global-title"><div className="global-copy reveal-on-scroll"><p className="eyebrow eyebrow-light"><span>02B</span> Local → global</p><h2 id="global-title">Reach further<br /><em>without losing the plot.</em></h2><p>We help ambitious businesses carry a clear point of view from local attention into wider digital conversations.</p><div className="global-legend"><span><i className="legend-dot legend-origin" /> Origin</span><span><i className="legend-dot legend-reach" /> Reach</span><span><i className="legend-dot legend-next" /> Next move</span></div></div><div className="global-visual reveal-on-scroll" aria-label="Abstract global reach visual"><div className="global-orbit global-orbit-one" /><div className="global-orbit global-orbit-two" /><svg className="global-routes" viewBox="0 0 500 300" role="img" aria-label="Animated routes from local context to wider digital reach"><path d="M105 205 C180 130 255 106 315 120 S394 178 420 146" pathLength="1" /><path d="M105 205 C172 220 244 234 320 210 S384 175 420 146" pathLength="1" /></svg>{globalSignals.map((signal, index) => <div key={signal.label} className={`global-signal global-signal-${index}`} style={{ left: signal.x, top: signal.y }}><span className="global-signal-dot" /><div><strong>{signal.label}</strong><small>{signal.detail}</small></div></div>)}<span className="global-visual-caption">strategy / system / movement</span></div></section>
+
+        <section id="journey" className="journey-section" aria-labelledby="journey-title"><div className="journey-heading reveal-on-scroll"><p className="eyebrow"><span>02C</span> The journey</p><h2 id="journey-title">A clear path<br /><em>forward.</em></h2><p>Good work should make the next move easier to see. Explore the way we take an idea from first brief to forward motion.</p></div><div className="journey-panel reveal-on-scroll"><div className={`journey-track ${journeyVisible ? "is-active" : ""}`}><div className="journey-progress-line" />{journeySteps.map((step, index) => <button type="button" key={step.index} className={`journey-step ${journeyStep === index ? "is-current" : ""}`} onClick={() => setJourneyStep(index)} aria-pressed={journeyStep === index}><span className="journey-step-dot">{step.index}</span><strong>{step.label}</strong><small>{step.copy}</small></button>)}</div><div className="journey-selected"><span>Now viewing / {journeySteps[journeyStep].index}</span><strong>{journeySteps[journeyStep].label}</strong><p>{journeySteps[journeyStep].copy}</p></div></div></section>
 
         <section id="work" className="section work-section"><span className="section-stamp work-stamp">Ledger / 03</span><div className="work-heading"><div><p className="eyebrow"><span>03</span> Selected work</p><h2>Proof with a<br /><em>pulse.</em></h2></div><div className="work-heading-side"><p className="work-note">A growing body of work for businesses ready to make their next market feel closer.</p><span className="work-archive-label">Archive / 01—05 / Case studies</span><span className="work-caption">Selected signals from the studio</span><button type="button" className="founder-entry" onClick={openFounderAccess}><LockKeyhole size={14} /> Founders: manage projects</button></div></div><div className="project-grid">{publishedProjects.map((project) => <article className={`project-card project-${project.id} ${project.tone} reveal-on-scroll`} key={project.id} onClick={() => setProjectModal(project)} tabIndex={0} onKeyDown={(event) => { if (event.key === "Enter") setProjectModal(project); }}><div className="project-topline"><span>{project.number}</span><span>{project.tag}</span></div>{project.image ? <div className="project-image"><img loading="lazy" src={project.image} alt={`${project.title} project visual`} /><div className="project-image-overlay" /><span className="project-image-open">View case <ArrowUpRight size={13} /></span></div> : <div className="project-abstract" aria-hidden="true"><div className="abstract-line" /><div className="abstract-block" /><div className="abstract-circle" /><img className="abstract-symbol" src={`${STORAGE}ecommerce-hub-symbol_d92f1230.png`} alt="" /><span>{project.number}</span></div>}<div className="project-copy"><p>{project.type}</p><h3>{project.title}</h3><span>{project.detail}</span><div className="project-meta"><span>Proof status</span><b>Case study details on request</b></div><button type="button" className="project-link" onClick={(event) => { event.stopPropagation(); setProjectModal(project); }}>Open project <CircleArrowOutUpRight size={16} /></button></div></article>)}</div>{publishedProjects.length === 0 && <div className="empty-portfolio"><Sparkles size={18} /> The next project is waiting to be published from the founder console.</div>}</section>
 
@@ -194,7 +230,7 @@ export default function Home() {
 
         <section id="about" className="section about-section"><span className="section-stamp about-stamp">Ledger / 04A</span><div className="about-visual reveal-on-scroll"><div className="about-visual-main"><img loading="lazy" src={ABHISHEK_PHOTO} alt="Abhishek Damale, e_commerce.hub co-founder" /></div><div className="about-visual-side"><img loading="lazy" src={YASH_PHOTO} alt="Yash Mete, e_commerce.hub co-founder" /><span>Built close / built to move</span></div><div className="about-visual-tag">Local → Global<br />with intent.</div></div><div className="about-copy reveal-on-scroll"><p className="eyebrow"><span>04A</span> About the studio</p><h2>Small team.<br /><em>Useful ambition.</em></h2><p>e_commerce.hub is a two-person growth studio for businesses and startups that want sharper marketing, better social presence, and a website that earns the next conversation.</p><div className="about-points"><span><b>01</b> Close collaboration</span><span><b>02</b> Practical delivery</span><span><b>03</b> Local context, global intent</span></div><button className="button button-coral" type="button" onClick={() => scrollToSection("contact")}>Tell us what you’re building <ArrowUpRight size={16} /></button></div></section>
 
-        <section id="contact" className="contact-section contact-section-upgraded"><span className="section-stamp contact-stamp">Ledger / 05</span><div className="contact-grid-line" aria-hidden="true" /><div className="contact-copy"><p className="eyebrow"><span>05</span> Your next move</p><h2>Ready to move from <em>local</em> to global?</h2><p>Tell us what you are building, where it is stuck, or where you want it to go. We will come back with a useful first thought.</p><div className="contact-options"><a href="mailto:ecommercehub54@gmail.com"><Mail size={15} /> Email us</a><a href="tel:+919112658707"><Phone size={15} /> Call Abhishek</a><a href="https://wa.me/918378976036" target="_blank" rel="noreferrer"><MessageCircle size={15} /> WhatsApp Yash</a><span><MapPin size={15} /> Location details on request</span></div></div><form aria-label="Project enquiry form" className="enquiry-form reveal-on-scroll" onSubmit={handleContactSubmit}><div className="form-kicker">Start with the useful bit.</div><label>Name<input required name="name" autoComplete="name" placeholder="Your name" /></label><div className="form-two-col"><label>Phone<input required name="phone" autoComplete="tel" placeholder="Your phone number" /></label><label>Email<input required type="email" name="email" autoComplete="email" placeholder="you@company.com" /></label></div><label>Requirement / message<textarea required name="message" rows={4} placeholder="What are you trying to move?" /></label><button className="button button-coral" type="submit">Send enquiry <ArrowUpRight size={16} /></button>{formStatus === "success" && <div className="form-success"><Check size={16} /><span>Thanks — your enquiry is prepared. Your email app should open with the details.</span></div>}</form></section>
+        <section id="contact" className="contact-section contact-section-upgraded"><span className="section-stamp contact-stamp">Ledger / 05</span><div className="contact-grid-line" aria-hidden="true" /><div className="contact-copy"><p className="eyebrow"><span>05</span> Your next move</p><h2>Ready to move from <em>local</em> to global?</h2><p>Tell us what you are building, where it is stuck, or where you want it to go. We will come back with a useful first thought.</p><div className="contact-options"><a href="mailto:ecommercehub54@gmail.com"><Mail size={15} /> Email us</a><a href="tel:+919112658707"><Phone size={15} /> Call Abhishek</a><a href="https://wa.me/918378976036" target="_blank" rel="noreferrer"><MessageCircle size={15} /> WhatsApp Yash</a><span><MapPin size={15} /> Location details on request</span></div></div><form aria-label="Project enquiry form" className="enquiry-form reveal-on-scroll" onSubmit={handleContactSubmit}><div className="form-kicker">Start with the useful bit.</div><label>Name<input required name="name" autoComplete="name" placeholder="Your name" /></label><div className="form-two-col"><label>Phone<input required name="phone" autoComplete="tel" placeholder="Your phone number" /></label><label>Email<input required type="email" name="email" autoComplete="email" placeholder="you@company.com" /></label></div><label>Requirement / message<textarea required name="message" rows={4} placeholder="What are you trying to move?" /></label><button className="button button-coral" type="submit" disabled={formStatus === "loading"}>{formStatus === "loading" ? <><Loader2 size={16} className="spin" /> Preparing email…</> : <>Send enquiry <ArrowUpRight size={16} /></>}</button>{formStatus === "success" && <div className="form-success"><Check size={16} /><span>Thanks — your enquiry is prepared. Your email app should open with the details.</span></div>}</form></section>
       </main>
 
       <footer className="site-footer"><div className="footer-top"><a className="agency-lockup footer-agency-lockup" href="#top" aria-label="E-CommerceHub — Local to Global"><img className="agency-logo" src={AGENCY_LOGO} alt="" /><span className="agency-name"><strong>e_commerce<span>.hub</span></strong><small>LOCAL TO GLOBAL</small></span></a><div className="footer-note"><p>Small team. Big direction.<br />Local to global, by design.</p><div className="social-links" aria-label="Social media links"><a className="social-link" href="https://www.instagram.com/e_commerce_hub02?igsi=ejVlY2hldTE2dTV4" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={17} /><span>Instagram</span></a><button className="social-link social-link-soon" type="button" disabled title="Facebook link coming soon" aria-label="Facebook link coming soon"><Facebook size={17} /><span>Facebook · soon</span></button><button className="social-link social-link-soon" type="button" disabled title="LinkedIn link coming soon" aria-label="LinkedIn link coming soon"><Linkedin size={17} /><span>LinkedIn · soon</span></button></div></div><button className="footer-back" type="button" onClick={() => scrollToSection("top")}>Back to top <ArrowUpRight size={16} /></button></div><div className="footer-directory"><div><span className="footer-directory-label">Navigate</span><button type="button" onClick={() => scrollToSection("services")}>Services</button><button type="button" onClick={() => scrollToSection("work")}>Selected work</button><button type="button" onClick={() => scrollToSection("about")}>About the studio</button></div><div><span className="footer-directory-label">Capabilities</span><span>Marketing direction</span><span>Social growth</span><span>Web design + build</span></div><div><span className="footer-directory-label">Contact</span><a href="mailto:ecommercehub54@gmail.com">ecommercehub54@gmail.com</a><a href="tel:+919112658707">+91 91126 58707</a><a href="tel:+918378976036">+91 83789 76036</a></div></div><div className="footer-bottom"><span>© 2026 e_commerce.hub</span><span>Marketing / Social / Web</span><button type="button" className="footer-founder-link" onClick={openFounderAccess}>Founder console</button></div></footer>

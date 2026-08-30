@@ -726,3 +726,57 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .project-angad-international .abstract-block { transform: rotate(12deg); }
 .project-sahyadri-global-traders .abstract-block { transform: rotate(-7deg); }
 .agency-name strong { letter-spacing: -0.07em; }
+
+
+/* Global reach and journey modules: abstract, agency-safe motion instead of fabricated destinations or claims. */
+.global-section { position: relative; display: grid; grid-template-columns: 0.82fr 1.18fr; gap: clamp(40px, 8vw, 120px); align-items: center; padding: 120px clamp(22px, 8vw, 132px); overflow: hidden; color: var(--paper); background: var(--ink); }
+.global-copy h2, .journey-heading h2 { margin: 18px 0 0; font-family: "Sora", sans-serif; font-size: clamp(3rem, 5.8vw, 6.3rem); font-weight: 700; letter-spacing: -0.11em; line-height: 0.84; }
+.global-copy h2 em { color: var(--coral); }
+.global-copy > p:not(.eyebrow), .journey-heading > p:not(.eyebrow) { max-width: 410px; margin: 28px 0 0; color: rgba(245,240,232,0.68); font-size: 16px; line-height: 1.65; }
+.global-legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 31px; color: rgba(245,240,232,0.8); font: 700 9px/1.3 "Sora", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+.global-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend-dot { width: 8px; height: 8px; display: inline-block; border-radius: 50%; }
+.legend-origin { background: var(--coral); }
+.legend-reach { background: var(--blue); }
+.legend-next { background: var(--chartreuse); }
+.global-visual { min-height: 380px; position: relative; border: 1px solid rgba(245,240,232,0.18); overflow: hidden; background: radial-gradient(circle at 63% 42%, rgba(40,92,212,0.2), transparent 28%), linear-gradient(145deg, rgba(255,90,78,0.06), transparent 58%); }
+.global-visual::before, .global-visual::after { content: ""; position: absolute; inset: 13%; border: 1px solid rgba(245,240,232,0.13); border-radius: 50%; transform: rotate(-18deg); }
+.global-visual::after { inset: 24% 8%; transform: rotate(25deg); border-color: rgba(255,90,78,0.18); }
+.global-orbit { position: absolute; left: 22%; top: 15%; width: 58%; height: 70%; border: 1px solid rgba(245,240,232,0.14); border-radius: 50%; transform: rotate(-16deg); }
+.global-orbit-two { left: 28%; top: 24%; width: 48%; height: 58%; transform: rotate(36deg); border-color: rgba(148,226,39,0.18); }
+.global-routes { position: absolute; inset: 16% 9%; width: 82%; height: 68%; overflow: visible; }
+.global-routes path { fill: none; stroke: var(--coral); stroke-width: 1.4; stroke-dasharray: 0.02 0.04; stroke-dashoffset: 0; opacity: 0.85; animation: route-draw 2.4s 0.45s var(--ease-out) both; }
+.global-routes path:nth-child(2) { stroke: var(--chartreuse); animation-delay: 0.75s; opacity: 0.65; }
+@keyframes route-draw { from { stroke-dasharray: 0 1; } to { stroke-dasharray: 0.02 0.04; } }
+.global-signal { position: absolute; display: flex; align-items: center; gap: 8px; transform: translate(-50%, -50%); }
+.global-signal-dot { width: 11px; height: 11px; border: 2px solid var(--ink); border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 5px rgba(255,90,78,0.16); animation: signal-pulse 2.6s ease-in-out infinite; }
+.global-signal-1 .global-signal-dot { background: var(--blue); box-shadow: 0 0 0 5px rgba(40,92,212,0.16); animation-delay: 0.4s; }
+.global-signal-2 .global-signal-dot { background: var(--chartreuse); box-shadow: 0 0 0 5px rgba(148,226,39,0.14); animation-delay: 0.8s; }
+.global-signal div { display: grid; gap: 2px; }
+.global-signal strong { color: var(--paper); font: 700 10px/1.2 "Sora", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+.global-signal small { color: rgba(245,240,232,0.55); font-size: 10px; white-space: nowrap; }
+.global-visual-caption { position: absolute; left: 18px; bottom: 16px; color: rgba(245,240,232,0.52); font: 700 9px/1.3 "Sora", sans-serif; letter-spacing: 0.1em; text-transform: uppercase; }
+@keyframes signal-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+.journey-section { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: clamp(40px, 8vw, 120px); align-items: center; padding: 120px clamp(22px, 8vw, 132px); background: #f0e8dc; border-top: 1px solid var(--line); }
+.journey-heading h2 { color: var(--ink); }
+.journey-heading h2 em { color: var(--blue); }
+.journey-heading > p:not(.eyebrow) { color: var(--ink-soft); }
+.journey-panel { padding: 32px; border: 1px solid var(--ink); background: var(--paper); box-shadow: 9px 9px 0 var(--ink); }
+.journey-track { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; position: relative; }
+.journey-progress-line { position: absolute; top: 19px; left: 12%; right: 12%; height: 1px; background: var(--line); overflow: hidden; }
+.journey-progress-line::after { content: ""; display: block; width: 100%; height: 100%; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform 900ms var(--ease-out); }
+.journey-track.is-active .journey-progress-line::after { transform: scaleX(1); }
+.journey-step { display: grid; justify-items: center; gap: 10px; position: relative; z-index: 1; padding: 0; color: var(--ink); background: transparent; text-align: center; }
+.journey-step-dot { display: grid; place-items: center; width: 39px; height: 39px; border: 1px solid var(--ink); border-radius: 50%; color: var(--ink); background: var(--paper); font: 700 10px/1 "Sora", sans-serif; transition: color 180ms ease, background 180ms ease, transform 180ms var(--ease-out); }
+.journey-step:hover .journey-step-dot, .journey-step.is-current .journey-step-dot { color: var(--paper); background: var(--coral); transform: translateY(-3px) scale(1.05); }
+.journey-step strong { font: 700 11px/1.25 "Sora", sans-serif; text-transform: uppercase; }
+.journey-step small { max-width: 120px; color: var(--ink-soft); font-size: 11px; line-height: 1.4; }
+.journey-selected { display: grid; gap: 8px; margin-top: 36px; padding: 18px; border-top: 2px solid var(--coral); background: #f0e8dc; }
+.journey-selected span { color: var(--coral); font: 700 9px/1.2 "Sora", sans-serif; letter-spacing: 0.1em; text-transform: uppercase; }
+.journey-selected strong { color: var(--ink); font: 700 clamp(1.5rem, 3vw, 2.6rem)/1 "Sora", sans-serif; letter-spacing: -0.08em; }
+.journey-selected p { margin: 0; color: var(--ink-soft); font-size: 13px; line-height: 1.5; }
+.spin { animation: spin 0.75s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 980px) { .global-section, .journey-section { grid-template-columns: 1fr; gap: 54px; } .global-visual { max-width: 720px; } .journey-panel { max-width: 760px; } }
+@media (max-width: 720px) { .global-section, .journey-section { padding: 82px 22px; } .global-visual { min-height: 300px; } .journey-panel { padding: 20px 14px; } .journey-track { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 10px; } .journey-progress-line { display: none; } .journey-step small { max-width: 140px; } }
+@media (prefers-reduced-motion: reduce) { .global-routes path, .global-signal-dot, .spin { animation: none; } .journey-progress-line::after { transition: none; transform: scaleX(1); } }

@@ -77,3 +77,10 @@
 - [x] Strengthen conversion paths with clear, non-spammy contact, call, WhatsApp, and enquiry CTAs.
 - [x] Validate reduced-motion behavior, performance-minded animation, responsiveness, SEO markup, and production build.
 - [x] Save a new checkpoint after the final visual and professionalism review.
+
+## Attached animation-system upgrade
+
+- [x] Add the cinematic hero, smart navbar, reusable reveal, and premium CTA motion behaviors.
+- [x] Add abstract global-reach animation and interactive business journey timeline without invented destinations.
+- [x] Add once-only verified count-up behavior and enquiry loading/success states.
+- [x] Validate desktop/mobile responsiveness, reduced motion, and production build before checkpoint.
