@@ -27,7 +27,7 @@ const STORAGE = "/manus-storage/";
 const AGENCY_LOGO = `${STORAGE}ecommerce-hub-agency-logo_5b64a04c.jpeg`;
 const YASH_PHOTO = `${STORAGE}yash-mete-portrait_cf15b695.jpeg`;
 const ABHISHEK_PHOTO = `${STORAGE}abhishek-damale-portrait_abc61bb6.png`;
-const PROJECTS_KEY = "ecommerce-hub-projects-v2";
+const PROJECTS_KEY = "ecommerce-hub-projects-v3";
 const FOUNDER_CODE = "BDAY29052006";
 
 type Tone = "project-coral" | "project-blue" | "project-navy" | "project-chartreuse" | "project-paper";
@@ -47,11 +47,11 @@ type Project = {
 type ProjectDraft = Omit<Project, "id" | "number">;
 
 const defaultProjects: Project[] = [
-  { id: "retail", number: "01", title: "Retail, ready for more", type: "Brand + digital storefront", detail: "A clear, conversion-minded system for a product brand stepping beyond its first market.", image: `${STORAGE}ecommerce-hub-project-retail_ccd8ad52.jpg`, tone: "project-coral", tag: "Commerce", link: "", published: true },
-  { id: "social", number: "02", title: "A louder social signal", type: "Social growth system", detail: "A repeatable content rhythm that gives a growing business more ways to be remembered.", image: `${STORAGE}ecommerce-hub-project-social_0a4e3731.jpg`, tone: "project-blue", tag: "Social", link: "", published: true },
-  { id: "web", number: "03", title: "The website as a closer", type: "Strategy + web design", detail: "A digital experience built to move visitors from curious to confident, one decision at a time.", image: `${STORAGE}ecommerce-hub-project-web_cdd86016.jpg`, tone: "project-navy", tag: "Web", link: "", published: true },
-  { id: "launch", number: "04", title: "Local brand, broader map", type: "Go-to-market direction", detail: "Sharper positioning, stronger touchpoints, and a launch plan built around real-world momentum.", image: null, tone: "project-chartreuse", tag: "Launch", link: "", published: true },
-  { id: "startup", number: "05", title: "From idea to storefront", type: "Startup growth partner", detail: "The practical first chapter for a founder who needs the story, system, and next move to align.", image: null, tone: "project-paper", tag: "Startup", link: "", published: true },
+  { id: "pachorekar-jewellers", number: "01", title: "Pachorekar Jewellers", type: "Jewellery catalogue + customer journey", detail: "A catalogue-led jewellery experience with product categories, appointment booking, care guidance, location, FAQ, and direct contact paths.", image: null, tone: "project-coral", tag: "Jewellery / Web", link: "https://www.pachorekarjewellers.co.in/", published: true },
+  { id: "angad-international", number: "02", title: "Angad International", type: "Agriculture export website", detail: "A focused export experience for fresh produce, spices, and dehydrated products, supported by product discovery, export capabilities, and inquiry CTAs.", image: null, tone: "project-blue", tag: "Agri / Export", link: "https://www.angadinternational.com/", published: true },
+  { id: "sahyadri-global-traders", number: "03", title: "Sahyadri Global Traders", type: "Global agriculture trade platform", detail: "A global agriculture-trade experience centered on export products, quality assurance, cold-chain logistics, insight articles, and direct enquiries.", image: null, tone: "project-navy", tag: "Agri / Global", link: "https://www.sahyadriglobaltraders.com/", published: true },
+  { id: "launch", number: "04", title: "Local brand, broader map", type: "Go-to-market direction", detail: "A future portfolio chapter for sharper positioning, stronger touchpoints, and a launch plan built around real-world momentum.", image: null, tone: "project-chartreuse", tag: "Launch", link: "", published: true },
+  { id: "startup", number: "05", title: "From idea to storefront", type: "Startup growth partner", detail: "A future portfolio chapter for a founder who needs the story, system, and next move to align.", image: null, tone: "project-paper", tag: "Startup", link: "", published: true },
 ];
 
 const services = [

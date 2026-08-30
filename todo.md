@@ -39,3 +39,9 @@
 - [x] Replace the compact symbol lockup with the provided logo in the header and footer.
 - [x] Add a white navigation strip with readable agency name and primary links.
 - [x] Verify desktop/mobile header contrast and save an updated checkpoint.
+
+## Verified client projects
+
+- [x] Review Pachorekar Jewellers, Angad International, and Sahyadri Global Traders public project details.
+- [x] Add the three projects first in the public portfolio with accurate descriptions and live website links.
+- [x] Verify the project cards on desktop and mobile and save an updated checkpoint.
