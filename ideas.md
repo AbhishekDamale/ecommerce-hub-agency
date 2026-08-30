@@ -87,3 +87,9 @@ The user provided the agency name, service categories, founders, and the existen
 - The brand symbol is a recurring device, not only a small header mark. It now appears in the header, hero annotation, abstract project chapters, and final contact moment.
 - Lower-page sections keep the editorial ledger language through ruled lines, grid ticks, paper-toned surfaces, and textured overlays, even when using flat color fields.
 - The final CTA uses a warm paper field with a coral directional shape rather than a full chartreuse block, keeping the signature action color clear.
+
+## Upgrade Direction
+
+The refresh keeps the Editorial Growth Ledger foundation but raises the finish with **Sora** for display typography and **Manrope** for body copy, a quieter paper-and-ink palette, and motion that feels intentional rather than decorative. Public visitors can open a project detail view from any portfolio card. Founders get a clearly separated console entry point with a local access-code gate, project CRUD controls, publish/unpublish state, and browser persistence.
+
+Because this remains a frontend-only static project, the founder gate is a local convenience layer rather than production-grade authentication. A real secure founder console should be connected to backend auth before public deployment.
