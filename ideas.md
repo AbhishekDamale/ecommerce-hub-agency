@@ -93,3 +93,9 @@ The user provided the agency name, service categories, founders, and the existen
 The refresh keeps the Editorial Growth Ledger foundation but raises the finish with **Sora** for display typography and **Manrope** for body copy, a quieter paper-and-ink palette, and motion that feels intentional rather than decorative. Public visitors can open a project detail view from any portfolio card. Founders get a clearly separated console entry point with a local access-code gate, project CRUD controls, publish/unpublish state, and browser persistence.
 
 Because this remains a frontend-only static project, the founder gate is a local convenience layer rather than production-grade authentication. A real secure founder console should be connected to backend auth before public deployment.
+
+## Reference-Inspired Redesign Notes
+
+The MusiTech reference suggests a clear digital-agency information architecture: a compact navigation, an immediately legible hero with a direct CTA, visible capability highlights, a dedicated services block, and trust-building proof sections. e_commerce.hub will reinterpret those patterns using its own paper-and-ink editorial identity rather than copying MusiTech’s dark gradient aesthetic, copy, testimonials, imagery, or brand elements.
+
+The redesign direction is a **tactile digital studio**: warm ivory foundation, ink navy hero contrast, coral as the action color, cobalt for structured service cards, and chartreuse used only for small emphasis. The page flow will be hero → quick capability signals → services → method → selected work → founders → contact, with clearer hierarchy and stronger entry points for service discovery.

@@ -26,3 +26,9 @@
 - [x] Add the provided Instagram profile as an active social link.
 - [x] Add Facebook and LinkedIn logo controls with clear coming-soon states.
 - [x] Verify the footer links and save an updated checkpoint.
+
+## Reference-inspired redesign
+
+- [x] Translate the MusiTech reference into original e_commerce.hub design decisions.
+- [x] Restructure the homepage for clearer service discovery, capability proof, and conversion.
+- [x] Implement and verify the new desktop and mobile experience without copying protected branding or content.

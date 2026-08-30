@@ -114,10 +114,10 @@
   box-shadow: 0 1px 0 rgba(16, 35, 62, 0.12), 0 10px 32px rgba(16, 35, 62, 0.05);
   backdrop-filter: blur(14px);
 }
-.wordmark { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.wordmark-mark { display: grid; width: 31px; height: 31px; place-items: center; }
-.wordmark-mark img { display: block; width: 31px; height: 31px; object-fit: contain; transform: scale(1.48); }
-.wordmark-type { font-family: "Sora", sans-serif; font-size: 16px; font-weight: 700; letter-spacing: -0.05em; }
+.wordmark { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.wordmark-mark { display: grid; width: 36px; height: 36px; place-items: center; }
+.wordmark-mark img { display: block; width: 36px; height: 36px; object-fit: contain; transform: scale(1.48); }
+.wordmark-type { font-family: "Sora", sans-serif; font-size: 18px; font-weight: 700; letter-spacing: -0.07em; }
 .wordmark-type b { color: var(--coral); font-weight: 700; }
 .site-nav { display: flex; align-items: center; gap: 34px; margin-left: auto; }
 .site-nav button, .footer-back {
@@ -171,8 +171,13 @@
   padding: 154px clamp(22px, 8vw, 132px) 104px;
   position: relative;
   border-bottom: 1px solid var(--line);
-  background: var(--paper);
+  background: var(--ink);
+  color: var(--paper);
 }
+.hero-section::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 58%; pointer-events: none; opacity: 0.38; background: repeating-linear-gradient(90deg, transparent 0, transparent 58px, rgba(245,240,232,0.05) 59px); }
+.hero-section .hero-lede { color: rgba(245,240,232,0.7); }
+.hero-section .hero-footnote { color: rgba(245,240,232,0.62); }
+.hero-section .hero-crosshair span { background: var(--paper); }
 .hero-grid-mark { position: absolute; top: 144px; left: clamp(22px, 5vw, 76px); display: flex; gap: 7px; }
 .hero-grid-mark span { width: 5px; height: 5px; display: block; background: var(--coral); }
 .hero-copy { max-width: 575px; padding-left: clamp(0px, 3vw, 54px); position: relative; z-index: 2; }
@@ -182,6 +187,10 @@
 .hero-copy h1 { max-width: 620px; margin: 0; font-family: "Sora", sans-serif; font-size: clamp(4rem, 7.3vw, 7.25rem); font-weight: 700; letter-spacing: -0.09em; line-height: 0.91; }
 h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .hero-lede { max-width: 470px; margin: 34px 0 0; color: var(--ink-soft); font-size: clamp(16px, 1.5vw, 19px); line-height: 1.58; }
+.hero-capabilities { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 28px; color: rgba(245,240,232,0.72); font-family: "Sora", sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+.hero-capabilities span { display: inline-flex; align-items: center; gap: 7px; }
+.hero-capabilities b { color: var(--chartreuse); font-size: 9px; }
+.hero-capabilities span + span::before { content: ""; width: 4px; height: 4px; margin-right: 1px; background: var(--coral); }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 27px; margin-top: 34px; }
 .button-coral { border-color: var(--coral); background: var(--coral); color: #fffaf5; }
 .button-coral:hover { border-color: var(--ink); background: var(--ink); box-shadow: 5px 5px 0 var(--chartreuse); }
@@ -217,6 +226,7 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .services-section { display: grid; grid-template-columns: minmax(250px, 0.72fr) minmax(0, 1.28fr); gap: clamp(48px, 10vw, 150px); }
 .section-intro h2, .work-heading h2 { margin: 0; font-family: "Sora", sans-serif; font-size: clamp(3rem, 5vw, 5.65rem); font-weight: 700; letter-spacing: -0.09em; line-height: 0.92; }
 .section-note { max-width: 300px; margin: 33px 0 0; color: var(--ink-soft); font-size: 15px; line-height: 1.6; }
+.section-callout { display: inline-flex; align-items: center; gap: 8px; margin-top: 29px; padding: 9px 10px; border: 1px solid var(--line); color: var(--ink); background: var(--chartreuse); font-family: "Sora", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transform: rotate(-2deg); }
 .service-list { border-top: 1px solid var(--line); }
 .service-row { display: grid; grid-template-columns: 54px minmax(0, 1fr) 30px; gap: 25px; align-items: start; padding: 31px 0 34px; border-bottom: 1px solid var(--line); transition: padding 220ms var(--ease-out), background-color 180ms ease; }
 .service-row:hover { padding-left: 16px; padding-right: 16px; background: var(--chartreuse); }
@@ -342,6 +352,7 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .social-link-soon:hover { border-color: rgba(245,240,232,0.28); color: var(--paper); background: transparent; transform: none; }
 .footer-back { justify-self: end; color: var(--paper); }
 .footer-bottom { display: flex; justify-content: space-between; gap: 25px; padding-top: 15px; border-top: 1px solid var(--line-light); color: rgba(245, 240, 232, 0.42); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+.footer-bottom::before { content: "Ledger / close"; color: var(--coral); font-family: "Sora", sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.1em; }
 
 .reveal-up { animation: reveal-up 720ms var(--ease-out) both; }
 .delay-1 { animation-delay: 90ms; }
@@ -376,6 +387,8 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
   .hero-grid-mark { top: 105px; left: 20px; }
   .hero-copy h1 { font-size: clamp(3.8rem, 17vw, 6.4rem); }
   .hero-lede { margin-top: 25px; font-size: 16px; }
+  .hero-capabilities { gap: 9px 13px; margin-top: 23px; font-size: 8px; }
+  .hero-section::before { width: 100%; opacity: 0.22; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 17px; margin-top: 27px; }
   .hero-footnote { margin-top: 50px; }
   .hero-visual { width: calc(100% - 14px); min-height: 340px; padding: 16px 0 31px 20px; }
@@ -386,6 +399,7 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
   .hero-crosshair { right: -15px; transform: scale(0.8); }
   .section { padding: 90px 20px; }
   .section-intro h2, .work-heading h2 { font-size: clamp(3.15rem, 15vw, 5.5rem); }
+  .section-callout { margin-top: 24px; }
   .services-section { gap: 49px; }
   .service-row { grid-template-columns: 35px minmax(0, 1fr) 24px; gap: 12px; padding: 25px 0 28px; }
   .service-row:hover { padding-left: 8px; padding-right: 8px; }
@@ -403,6 +417,7 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
   .work-section { padding-bottom: 90px; }
   .work-heading { display: block; margin-bottom: 52px; }
   .work-note { margin-top: 29px; }
+  .work-caption { margin-top: 2px; }
   .project-grid { display: block; }
   .project-card, .project-card:nth-child(2), .project-card:nth-child(3), .project-card:nth-child(4), .project-card:nth-child(5) { margin: 0 0 61px; }
   .project-card:nth-child(even) { margin-left: 11%; }
@@ -425,6 +440,7 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
   .social-links { gap: 7px; }
   .footer-back { justify-self: start; }
   .footer-bottom { display: grid; gap: 8px; }
+  .footer-bottom::before { order: -1; }
 }
 
 .work-heading-side { display: flex; flex-direction: column; align-items: flex-end; gap: 21px; }
@@ -527,6 +543,7 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .founders-stamp { top: 129px; left: clamp(22px, 8vw, 132px); }
 .contact-stamp { top: 150px; left: clamp(22px, 8vw, 132px); }
 .work-archive-label { color: var(--coral); font-family: "Sora", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.work-caption { color: var(--ink-soft); font-family: "Sora", sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
 .project-meta { display: flex; align-items: center; gap: 8px; margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 10px; }
 .project-meta span { color: var(--coral); font-family: "Sora", sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .project-meta b { font-weight: 600; }
