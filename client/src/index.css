@@ -104,16 +104,28 @@
   left: 0;
   right: 0;
   z-index: 30;
-  padding: 22px clamp(22px, 5vw, 76px);
+  min-height: 78px;
+  padding: 9px clamp(22px, 5vw, 76px);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(16, 35, 62, 0.13);
+  box-shadow: 0 4px 20px rgba(16, 35, 62, 0.06);
   transition: padding 220ms var(--ease-out), background-color 220ms ease, box-shadow 220ms ease;
 }
 .site-header.is-scrolled {
-  padding-top: 13px;
-  padding-bottom: 13px;
-  background: rgba(245, 240, 232, 0.9);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background: #ffffff;
   box-shadow: 0 1px 0 rgba(16, 35, 62, 0.12), 0 10px 32px rgba(16, 35, 62, 0.05);
   backdrop-filter: blur(14px);
 }
+.agency-lockup { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; width: auto; min-width: 252px; height: 60px; overflow: hidden; background: #ffffff; }
+.agency-logo { display: block; width: 66px; height: 56px; object-fit: cover; object-position: center; mix-blend-mode: multiply; }
+.agency-name { display: grid; gap: 2px; color: var(--ink); }
+.agency-name strong { font-family: "Sora", sans-serif; font-size: 17px; font-weight: 800; letter-spacing: -0.07em; line-height: 1; }
+.agency-name strong span { color: var(--coral); }
+.agency-name small { color: var(--coral); font-family: "Sora", sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.12em; line-height: 1; }
+.footer-agency-lockup { min-width: 272px; height: 62px; padding: 3px 8px 3px 4px; background: var(--paper); }
+.footer-agency-lockup .agency-logo { width: 66px; height: 56px; }
 .wordmark { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
 .wordmark-mark { display: grid; width: 36px; height: 36px; place-items: center; }
 .wordmark-mark img { display: block; width: 36px; height: 36px; object-fit: contain; transform: scale(1.48); }
@@ -375,8 +387,14 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 
 @media (max-width: 720px) {
   .contact-section::before { top: 56%; right: -24%; width: 70%; height: 56%; }
-  .site-header { padding: 16px 18px; }
-  .site-header.is-scrolled { padding-top: 11px; padding-bottom: 11px; }
+  .site-header { min-height: 64px; padding: 5px 18px; }
+  .agency-lockup { min-width: 205px; gap: 7px; }
+  .agency-lockup .agency-logo { width: 53px; height: 48px; }
+  .agency-name strong { font-size: 14px; }
+  .agency-name small { font-size: 6px; }
+  .footer-agency-lockup { min-width: 220px; }
+  .footer-agency-lockup .agency-logo { width: 58px; height: 50px; }
+  .site-header.is-scrolled { padding-top: 4px; padding-bottom: 4px; }
   .site-nav { display: none; position: absolute; top: 60px; left: 12px; right: 12px; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 18px 15px; background: var(--paper); box-shadow: 0 12px 30px rgba(16, 35, 62, 0.12); }
   .site-nav.is-open { display: flex; }
   .site-nav button { padding: 13px 0; text-align: left; border-bottom: 1px solid var(--line); }

@@ -32,3 +32,10 @@
 - [x] Translate the MusiTech reference into original e_commerce.hub design decisions.
 - [x] Restructure the homepage for clearer service discovery, capability proof, and conversion.
 - [x] Implement and verify the new desktop and mobile experience without copying protected branding or content.
+
+## Agency logo and header strip
+
+- [x] Copy and upload the provided agency logo as a persistent web asset.
+- [x] Replace the compact symbol lockup with the provided logo in the header and footer.
+- [x] Add a white navigation strip with readable agency name and primary links.
+- [x] Verify desktop/mobile header contrast and save an updated checkpoint.
