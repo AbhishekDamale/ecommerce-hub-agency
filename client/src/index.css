@@ -303,6 +303,15 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .founder-card-top { display: flex; justify-content: space-between; align-items: center; font-family: "Sora", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
 .founder-initials { align-self: center; color: var(--chartreuse); font-family: "Sora", sans-serif; font-size: clamp(5.5rem, 10vw, 10rem); font-weight: 700; letter-spacing: -0.14em; line-height: 0.8; }
 .founder-card-blue .founder-initials { color: var(--coral); }
+.founder-photo { align-self: center; position: relative; width: min(100%, 232px); height: 226px; overflow: hidden; border: 1px solid rgba(255,250,245,0.7); background: var(--paper-deep); transform: rotate(-2.5deg); box-shadow: 8px 8px 0 rgba(16,35,62,0.2); transition: transform 280ms var(--ease-out), box-shadow 280ms var(--ease-out); }
+.founder-card-blue .founder-photo { transform: rotate(2.5deg); }
+.founder-card:hover .founder-photo { transform: rotate(0deg) scale(1.02); box-shadow: 10px 10px 0 rgba(16,35,62,0.22); }
+.founder-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(16,35,62,0.02), transparent 58%, rgba(16,35,62,0.32)); mix-blend-mode: multiply; }
+.founder-photo img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.84) contrast(1.05); }
+.founder-photo-abhishek img { object-position: center 23%; }
+.founder-photo-yash img { object-position: center 25%; }
+.founder-photo span { position: absolute; left: 11px; bottom: 10px; z-index: 1; padding: 5px 7px; color: var(--ink); background: var(--chartreuse); font-family: "Sora", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; }
+
 .founder-card-bottom h3 { margin: 0; color: #fffaf5; font-family: "Sora", sans-serif; font-size: clamp(2.5rem, 4vw, 4.25rem); font-weight: 700; letter-spacing: -0.1em; line-height: 0.84; }
 .founder-card-bottom p { max-width: 210px; margin: 22px 0 0; color: rgba(255, 250, 245, 0.75); font-size: 13px; line-height: 1.45; }
 
@@ -400,6 +409,7 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
   .founder-cards { width: 100%; display: block; }
   .founder-card { min-height: 420px; margin-bottom: 17px; }
   .founder-initials { font-size: 7rem; }
+  .founder-photo { width: min(100%, 260px); height: 260px; }
   .contact-section { display: block; padding: 94px 20px 105px; }
   .contact-copy h2 { font-size: clamp(3.65rem, 16vw, 6.5rem); }
   .contact-copy > p:not(.eyebrow) { margin-top: 31px; font-size: 16px; }

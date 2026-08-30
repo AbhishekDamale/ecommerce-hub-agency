@@ -8,3 +8,15 @@
 - [x] Add tasteful scroll, hover, modal, and form animations with reduced-motion support.
 - [x] Run type checking, production build, and responsive visual verification.
 - [x] Save a checkpoint and deliver the upgraded version with setup notes.
+
+## Founder portrait update
+
+- [x] Copy and upload the provided Yash Mete portrait as a persistent web asset.
+- [x] Add the portrait to Yash’s founder card with a responsive crop and editorial treatment.
+- [x] Run a responsive visual check and save an updated checkpoint.
+
+## Second founder portrait
+
+- [x] Copy and upload the provided Abhishek Damale portrait as a persistent web asset.
+- [x] Add both founder portraits to the responsive founders cards with consistent editorial framing.
+- [x] Re-run the visual check and create a combined founders-photo checkpoint.
