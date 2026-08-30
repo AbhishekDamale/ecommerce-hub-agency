@@ -28,7 +28,7 @@ const AGENCY_LOGO = `${STORAGE}ecommerce-hub-agency-logo_5b64a04c.jpeg`;
 const YASH_PHOTO = `${STORAGE}yash-mete-portrait_cf15b695.jpeg`;
 const ABHISHEK_PHOTO = `${STORAGE}abhishek-damale-portrait_abc61bb6.png`;
 const PROJECTS_KEY = "ecommerce-hub-projects-v2";
-const FOUNDER_CODE = "HUB-FOUNDERS";
+const FOUNDER_CODE = "BDAY29052006";
 
 type Tone = "project-coral" | "project-blue" | "project-navy" | "project-chartreuse" | "project-paper";
 type Project = {
