@@ -45,3 +45,10 @@
 - [x] Review Pachorekar Jewellers, Angad International, and Sahyadri Global Traders public project details.
 - [x] Add the three projects first in the public portfolio with accurate descriptions and live website links.
 - [x] Verify the project cards on desktop and mobile and save an updated checkpoint.
+
+## Founder profile windows
+
+- [x] Add professional founder profile data for Yash Mete and Abhishek Damale.
+- [x] Make both founder cards clickable and open detailed profile windows.
+- [x] Add mailto and telephone contact actions with responsive layout.
+- [x] Verify the profile windows on desktop/mobile and save a checkpoint.
