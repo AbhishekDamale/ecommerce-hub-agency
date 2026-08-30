@@ -20,3 +20,9 @@
 - [x] Copy and upload the provided Abhishek Damale portrait as a persistent web asset.
 - [x] Add both founder portraits to the responsive founders cards with consistent editorial framing.
 - [x] Re-run the visual check and create a combined founders-photo checkpoint.
+
+## Social handles
+
+- [x] Add the provided Instagram profile as an active social link.
+- [x] Add Facebook and LinkedIn logo controls with clear coming-soon states.
+- [x] Verify the footer links and save an updated checkpoint.
