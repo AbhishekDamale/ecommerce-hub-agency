@@ -126,3 +126,10 @@
 - [x] Add a second static Explore screen with heading-style buttons for Past Work, Services, and Packages.
 - [x] Ensure each Explore button opens its dedicated page rather than an in-page slide.
 - [x] Verify the two-screen flow on desktop/mobile and save a checkpoint.
+
+## Corrected two-screen landing
+
+- [x] Make the main homepage contain only Hero screen 1 and Explore screen 2.
+- [x] Remove the long scrolling sections from the first-visit homepage route without deleting the existing detail pages.
+- [x] Keep Past Work, Services, and Packages as separate pages opened by buttons.
+- [x] Validate the compact landing page and separate routes on desktop/mobile, then save a checkpoint.
