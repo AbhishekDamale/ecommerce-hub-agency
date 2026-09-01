@@ -914,3 +914,37 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .detail-page-footer p { margin: 0.7rem 0 0; color: var(--ink-soft); }
 .detail-page-footer > div:last-child { display: grid; gap: 0.7rem; align-content: start; }
 @media (max-width: 720px) { .detail-page-hero { grid-template-columns: 1fr; padding: 5rem 1.15rem 4.5rem; } .detail-page-index { display: none; } .detail-content-section, .detail-process, .detail-next-band, .detail-price-note { padding: 4.5rem 1.15rem; } .detail-section-heading { display: block; } .detail-project-row { grid-template-columns: 1fr; gap: 1.2rem; } .detail-project-art { min-height: 150px; } .detail-service-list article { grid-template-columns: 45px 1fr 20px; gap: 0.7rem; } .detail-process-grid, .detail-package-grid { grid-template-columns: 1fr; } .detail-package-card { min-height: 0; } .detail-page-footer { display: grid; padding: 2rem 1.15rem; } }
+
+
+/* Two-screen homepage flow: the Explore screen is a static directory, never a carousel. */
+.nav-explore-link { display: inline-flex; align-items: center; gap: 0.25rem; color: var(--coral); font: 800 0.7rem/1 Manrope, sans-serif; letter-spacing: 0.08em; text-decoration: none; text-transform: uppercase; }
+.nav-explore-link:hover { color: var(--ink); }
+.explore-page { min-height: 100vh; background: var(--paper); color: var(--ink); }
+.explore-nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem clamp(1.15rem, 6vw, 7rem); border-bottom: 1px solid var(--line); background: rgba(255,250,242,0.96); position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); }
+.explore-hero { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 3rem; padding: 8rem clamp(1.15rem, 8vw, 9rem) 7rem; background: var(--ink); color: var(--paper); position: relative; overflow: hidden; }
+.explore-hero::after { content: ""; position: absolute; width: 34rem; height: 34rem; right: 4%; top: 8%; border: 1px solid rgba(245,240,232,0.16); border-radius: 50%; box-shadow: 0 0 0 6rem rgba(217,242,92,0.04), 0 0 0 12rem rgba(255,90,78,0.04); }
+.explore-hero h1 { max-width: 10ch; margin: 1rem 0 1.3rem; font: 800 clamp(3.8rem, 9vw, 9rem)/0.86 Sora, sans-serif; letter-spacing: -0.1em; position: relative; z-index: 1; }
+.explore-hero h1 em { color: var(--coral); font-style: normal; }
+.explore-hero > div:first-child > p:last-child { max-width: 48ch; color: rgba(245,240,232,0.72); font-size: 1.05rem; line-height: 1.7; position: relative; z-index: 1; }
+.explore-index { align-self: end; display: flex; flex-direction: column; gap: 1rem; color: var(--chartreuse); font: 700 0.7rem/1 Manrope, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; position: relative; z-index: 1; }
+.explore-index strong { font: 800 clamp(6rem, 14vw, 12rem)/0.8 Sora, sans-serif; letter-spacing: -0.12em; }
+.explore-index small { color: rgba(245,240,232,0.52); }
+.explore-destinations { padding: 7rem clamp(1.15rem, 8vw, 9rem); }
+.explore-section-heading h2 { max-width: 11ch; margin: 0.8rem 0 3.5rem; font: 800 clamp(2.8rem, 6vw, 5.8rem)/0.88 Sora, sans-serif; letter-spacing: -0.09em; }
+.explore-section-heading h2 em { color: var(--coral); font-style: normal; }
+.explore-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.explore-card { min-height: 340px; padding: 1.35rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out); }
+.explore-card:hover { transform: translateY(-6px); box-shadow: 0 20px 42px rgba(16,35,62,0.14); }
+.explore-card-coral { background: var(--coral); }
+.explore-card-blue { background: var(--blue); color: var(--paper); border-color: transparent; }
+.explore-card-navy { background: var(--ink); color: var(--paper); border-color: transparent; }
+.explore-card-top { display: flex; align-items: center; justify-content: space-between; font: 700 0.68rem/1 Manrope, sans-serif; letter-spacing: 0.11em; text-transform: uppercase; }
+.explore-card h3 { max-width: 10ch; margin: 2rem 0 0.8rem; font: 800 clamp(2rem, 4vw, 3.8rem)/0.9 Sora, sans-serif; letter-spacing: -0.09em; }
+.explore-card p { max-width: 30ch; margin: 0; line-height: 1.55; opacity: 0.78; }
+.explore-card-link { display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid currentColor; font: 800 0.7rem/1 Manrope, sans-serif; letter-spacing: 0.1em; text-transform: uppercase; }
+.explore-footer-cta { padding: 6rem clamp(1.15rem, 8vw, 9rem); background: var(--paper-deep); }
+.explore-footer-cta > span { display: block; margin-bottom: 1rem; font: 700 0.68rem/1 Manrope, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
+.explore-footer-cta h2 { margin: 0 0 1.6rem; font: 800 clamp(3.2rem, 7vw, 7rem)/0.88 Sora, sans-serif; letter-spacing: -0.1em; }
+.explore-footer-cta h2 em { color: var(--coral); font-style: normal; }
+@media (max-width: 850px) { .explore-hero { grid-template-columns: 1fr; padding: 5rem 1.15rem 4.5rem; } .explore-index { display: none; } .explore-destinations, .explore-footer-cta { padding: 4.5rem 1.15rem; } .explore-grid { grid-template-columns: 1fr; } .explore-card { min-height: 260px; } }
+@media (max-width: 720px) { .nav-explore-link { display: none; } }

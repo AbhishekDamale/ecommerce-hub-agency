@@ -11,11 +11,13 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import { PackagesPage, PastWorkPage, ServicesPage } from "./pages/DetailPages";
+import ExplorePage from "./pages/ExplorePage";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/explore"} component={ExplorePage} />
       <Route path={"/work"} component={PastWorkPage} />
       <Route path={"/services"} component={ServicesPage} />
       <Route path={"/packages"} component={PackagesPage} />

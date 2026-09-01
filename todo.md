@@ -119,3 +119,10 @@
 - [x] Move the three hero buttons from in-page scrolling to page navigation.
 - [x] Add full detail content and return-to-home navigation for each page.
 - [x] Validate all routes on desktop/mobile and save a checkpoint.
+
+## Two-screen homepage flow
+
+- [x] Keep the first home screen focused on the hero and core agency message.
+- [x] Add a second static Explore screen with heading-style buttons for Past Work, Services, and Packages.
+- [x] Ensure each Explore button opens its dedicated page rather than an in-page slide.
+- [x] Verify the two-screen flow on desktop/mobile and save a checkpoint.
