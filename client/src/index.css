@@ -852,3 +852,65 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .package-cta:hover { color: var(--coral); }
 @media (max-width: 1100px) { .package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .packages-section { padding: 5rem 1.15rem; } .package-grid { grid-template-columns: 1fr; } .package-card { min-height: 0; } .package-copy { min-height: 0; } .hero-actions { align-items: stretch; } .hero-actions .button { flex: 1 1 100%; justify-content: space-between; } }
+
+
+/* Dedicated detail pages: a quieter, focused brief view with the same editorial ledger grammar. */
+.detail-page { min-height: 100vh; background: var(--paper); color: var(--ink); }
+.detail-page-nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem clamp(1.15rem, 6vw, 7rem); border-bottom: 1px solid var(--line); background: rgba(255,250,242,0.96); position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); }
+.detail-back { color: var(--ink); text-decoration: none; font: 800 1.1rem/1 Sora, sans-serif; letter-spacing: -0.06em; }
+.detail-back span, .detail-page-footer strong span { color: var(--coral); }
+.detail-home-link, .detail-page-footer a { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--ink); font: 700 0.72rem/1 Manrope, sans-serif; letter-spacing: 0.08em; text-decoration: none; text-transform: uppercase; }
+.detail-page-hero { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 3rem; padding: 8rem clamp(1.15rem, 8vw, 9rem) 7rem; background: var(--ink); color: var(--paper); position: relative; overflow: hidden; }
+.detail-page-hero::after { content: ""; position: absolute; width: 32rem; height: 32rem; right: 4%; top: 10%; border: 1px solid rgba(245,240,232,0.16); border-radius: 50%; box-shadow: 0 0 0 6rem rgba(217,242,92,0.04), 0 0 0 12rem rgba(255,90,78,0.04); }
+.detail-page-hero h1 { max-width: 11ch; margin: 1rem 0 1.3rem; font: 800 clamp(3.4rem, 8vw, 8.5rem)/0.86 Sora, sans-serif; letter-spacing: -0.1em; position: relative; z-index: 1; }
+.detail-page-hero h1 em, .detail-content-section h2 em, .detail-next-band h2 em, .detail-price-note h2 em { color: var(--coral); font-style: normal; }
+.detail-page-hero > div:first-child > p:last-of-type { max-width: 54ch; color: rgba(245,240,232,0.72); font-size: 1.05rem; line-height: 1.7; position: relative; z-index: 1; }
+.detail-page-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; position: relative; z-index: 1; }
+.detail-light-link { color: var(--paper); }
+.detail-page-index { align-self: end; display: flex; flex-direction: column; gap: 1rem; color: var(--chartreuse); font: 700 0.7rem/1 Manrope, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; position: relative; z-index: 1; }
+.detail-page-index strong { font: 800 clamp(6rem, 14vw, 12rem)/0.8 Sora, sans-serif; letter-spacing: -0.12em; }
+.detail-page-index span { color: rgba(245,240,232,0.52); }
+.detail-content-section { padding: 7rem clamp(1.15rem, 8vw, 9rem); }
+.detail-section-heading { display: flex; justify-content: space-between; gap: 2rem; margin-bottom: 3.5rem; }
+.detail-section-heading h2 { max-width: 12ch; margin: 0.8rem 0 0; font: 800 clamp(2.5rem, 6vw, 5.6rem)/0.9 Sora, sans-serif; letter-spacing: -0.09em; }
+.detail-project-list { display: grid; gap: 1rem; }
+.detail-project-row { display: grid; grid-template-columns: 250px 1fr; gap: 2.5rem; align-items: center; padding: 1.2rem; border: 1px solid var(--line); background: #fffaf2; transition: transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out); }
+.detail-project-row:hover { transform: translateY(-4px); box-shadow: 0 18px 34px rgba(16,35,62,0.12); }
+.detail-project-art { min-height: 210px; display: grid; place-items: center; position: relative; overflow: hidden; }
+.detail-tone-coral .detail-project-art { background: var(--coral); }
+.detail-tone-blue .detail-project-art { background: var(--blue); }
+.detail-tone-navy .detail-project-art { background: var(--ink); }
+.detail-project-art > span { color: var(--paper); font: 800 6rem/1 Sora, sans-serif; letter-spacing: -0.1em; position: relative; z-index: 1; }
+.detail-art-line { width: 150%; height: 1px; background: rgba(245,240,232,0.56); transform: rotate(-28deg); position: absolute; }
+.detail-art-circle { width: 7rem; height: 7rem; border: 18px solid rgba(217,242,92,0.82); border-radius: 50%; position: absolute; right: -1.5rem; bottom: -1.5rem; }
+.detail-project-row p, .detail-service-list p { margin: 0 0 0.5rem; color: var(--ink-soft); font: 700 0.68rem/1.3 Manrope, sans-serif; letter-spacing: 0.1em; text-transform: uppercase; }
+.detail-project-row h3, .detail-service-list h3 { margin: 0 0 0.8rem; font: 800 clamp(1.8rem, 3vw, 3.2rem)/0.95 Sora, sans-serif; letter-spacing: -0.08em; }
+.detail-project-row > div:last-child > span { display: block; max-width: 60ch; color: var(--ink-soft); line-height: 1.65; }
+.detail-project-row .button { margin-top: 1.5rem; }
+.detail-next-band, .detail-price-note { padding: 6rem clamp(1.15rem, 8vw, 9rem); background: var(--coral); color: var(--ink); }
+.detail-next-band > span, .detail-price-note > span { display: block; margin-bottom: 1rem; font: 700 0.7rem/1 Manrope, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
+.detail-next-band h2, .detail-price-note h2 { margin: 0 0 1.5rem; font: 800 clamp(3rem, 7vw, 7rem)/0.88 Sora, sans-serif; letter-spacing: -0.1em; }
+.detail-service-list { display: grid; border-top: 1px solid var(--line); }
+.detail-service-list article { display: grid; grid-template-columns: 90px 1fr 32px; gap: 1.5rem; align-items: start; padding: 1.7rem 0; border-bottom: 1px solid var(--line); }
+.detail-service-list article > span { color: var(--coral); font: 800 1.3rem/1 Sora, sans-serif; }
+.detail-service-list article > svg { color: var(--coral); margin-top: 0.4rem; }
+.detail-service-list article p { max-width: 58ch; color: var(--ink-soft); font: 400 1rem/1.65 Manrope, sans-serif; letter-spacing: 0; text-transform: none; }
+.detail-process { padding: 6rem clamp(1.15rem, 8vw, 9rem); background: var(--ink); color: var(--paper); }
+.detail-process h2 { margin: 1rem 0 2.5rem; font: 800 clamp(3rem, 7vw, 7rem)/0.88 Sora, sans-serif; letter-spacing: -0.1em; }
+.detail-process h2 em { color: var(--chartreuse); font-style: normal; }
+.detail-process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.detail-process-grid span { padding-top: 1rem; border-top: 1px solid rgba(245,240,232,0.3); font: 700 0.82rem/1.4 Manrope, sans-serif; text-transform: uppercase; }
+.detail-process-grid b { display: block; margin-bottom: 0.7rem; color: var(--coral); font: 800 1.5rem/1 Sora, sans-serif; }
+.detail-package-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.detail-package-card { min-height: 470px; padding: 1.4rem; display: flex; flex-direction: column; border: 1px solid var(--line); box-shadow: 0 16px 34px rgba(16,35,62,0.08); }
+.detail-package-card > p:not(.package-note) { max-width: 38ch; opacity: 0.78; line-height: 1.6; }
+.detail-package-card h3 { margin: 0; font: 800 clamp(3rem, 6vw, 5.8rem)/0.9 Sora, sans-serif; letter-spacing: -0.1em; }
+.detail-package-card ul { display: grid; gap: 0.75rem; margin: 0; padding: 1.25rem 0; list-style: none; border-top: 1px solid currentColor; }
+.detail-package-card li { display: flex; gap: 0.55rem; align-items: flex-start; line-height: 1.4; }
+.detail-price-note { background: var(--paper-deep); }
+.detail-price-note p { max-width: 54ch; margin-bottom: 1.6rem; line-height: 1.65; }
+.detail-page-footer { display: flex; justify-content: space-between; gap: 2rem; padding: 2rem clamp(1.15rem, 6vw, 7rem); background: #fffaf2; border-top: 1px solid var(--line); }
+.detail-page-footer strong { font: 800 1.15rem/1 Sora, sans-serif; letter-spacing: -0.07em; }
+.detail-page-footer p { margin: 0.7rem 0 0; color: var(--ink-soft); }
+.detail-page-footer > div:last-child { display: grid; gap: 0.7rem; align-content: start; }
+@media (max-width: 720px) { .detail-page-hero { grid-template-columns: 1fr; padding: 5rem 1.15rem 4.5rem; } .detail-page-index { display: none; } .detail-content-section, .detail-process, .detail-next-band, .detail-price-note { padding: 4.5rem 1.15rem; } .detail-section-heading { display: block; } .detail-project-row { grid-template-columns: 1fr; gap: 1.2rem; } .detail-project-art { min-height: 150px; } .detail-service-list article { grid-template-columns: 45px 1fr 20px; gap: 0.7rem; } .detail-process-grid, .detail-package-grid { grid-template-columns: 1fr; } .detail-package-card { min-height: 0; } .detail-page-footer { display: grid; padding: 2rem 1.15rem; } }

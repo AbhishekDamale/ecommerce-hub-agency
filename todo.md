@@ -112,3 +112,10 @@
 - [x] Add Basic, High Level, Advance, and Premium package tiers with clear inclusions.
 - [x] Show Price declared soon for every tier until final prices are provided.
 - [x] Validate anchor navigation and responsive layout, then save a checkpoint.
+
+## Dedicated detail pages
+
+- [x] Create dedicated Past Work, Services, and Packages routes.
+- [x] Move the three hero buttons from in-page scrolling to page navigation.
+- [x] Add full detail content and return-to-home navigation for each page.
+- [x] Validate all routes on desktop/mobile and save a checkpoint.
