@@ -803,3 +803,19 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 @media (max-width: 980px) { .faq-section { grid-template-columns: 1fr; gap: 52px; } }
 @media (max-width: 720px) { .faq-section { padding: 82px 22px; } .faq-item > button > span { font-size: 13px; } .faq-answer { padding-right: 12px; } .floating-contact { right: 16px; bottom: 70px; padding: 12px 13px; } .floating-contact span { display: none; } }
 @media (prefers-reduced-motion: reduce) { .faq-answer { animation: none; } }
+
+
+/* Third team member: keep the team archive balanced at three cards and stack cleanly on smaller screens. */
+.founder-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.founder-card-navy { color: var(--paper); background: var(--ink); }
+.founder-card-navy .founder-card-top { border-color: rgba(245,240,232,0.28); }
+.founder-card-navy .founder-card-bottom p { color: rgba(245,240,232,0.72); }
+.founder-card-navy .founder-photo::after { background: linear-gradient(180deg, rgba(16,35,62,0.02), rgba(16,35,62,0.72)); }
+.founder-photo-himanshu img { object-position: center 18%; }
+.founder-detail-navy { background: var(--ink); color: var(--paper); }
+.founder-detail-navy .founder-detail-copy > p:not(.founder-detail-role) { color: rgba(245,240,232,0.74); }
+.founder-detail-navy .founder-detail-facts { border-color: rgba(245,240,232,0.22); }
+.founder-detail-navy .founder-detail-facts small { color: var(--chartreuse); }
+.founder-detail-navy .founder-detail-facts strong, .founder-detail-navy .founder-detail-facts a { color: var(--paper); }
+@media (max-width: 1100px) { .founder-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .founder-card-navy { grid-column: 1 / -1; max-width: calc(50% - 10px); justify-self: center; } }
+@media (max-width: 720px) { .founder-cards { grid-template-columns: 1fr; } .founder-card-navy { grid-column: auto; max-width: none; justify-self: stretch; } }

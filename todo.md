@@ -92,3 +92,9 @@
 - [x] Implement reusable motion, journey, trust, card, form, and premium interaction systems.
 - [x] Add SEO, accessibility, performance, mobile, and no-fabrication safeguards.
 - [x] Validate the complete experience across requested responsive sizes and save a checkpoint.
+
+## Third team member
+
+- [x] Stage and upload Himanshu Kharwade’s portrait.
+- [x] Add his team card, role information, and clickable profile window.
+- [x] Validate the team layout on desktop and mobile, then save a checkpoint.
