@@ -98,3 +98,9 @@
 - [x] Stage and upload Himanshu Kharwade’s portrait.
 - [x] Add his team card, role information, and clickable profile window.
 - [x] Validate the team layout on desktop and mobile, then save a checkpoint.
+
+## Team social details
+
+- [x] Add Himanshu’s phone number and Instagram URL.
+- [x] Add Instagram URLs for Abhishek and Yash and expose them in profile actions.
+- [x] Validate links and save a checkpoint.
