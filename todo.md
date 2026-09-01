@@ -104,3 +104,11 @@
 - [x] Add Himanshu’s phone number and Instagram URL.
 - [x] Add Instagram URLs for Abhishek and Yash and expose them in profile actions.
 - [x] Validate links and save a checkpoint.
+
+## Early navigation and packages
+
+- [x] Add Past Work, Services, and Packages buttons near the top of the homepage.
+- [x] Make the Services destination show the complete client service list.
+- [x] Add Basic, High Level, Advance, and Premium package tiers with clear inclusions.
+- [x] Show Price declared soon for every tier until final prices are provided.
+- [x] Validate anchor navigation and responsive layout, then save a checkpoint.

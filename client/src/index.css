@@ -819,3 +819,36 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .founder-detail-navy .founder-detail-facts strong, .founder-detail-navy .founder-detail-facts a { color: var(--paper); }
 @media (max-width: 1100px) { .founder-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .founder-card-navy { grid-column: 1 / -1; max-width: calc(50% - 10px); justify-self: center; } }
 @media (max-width: 720px) { .founder-cards { grid-template-columns: 1fr; } .founder-card-navy { grid-column: auto; max-width: none; justify-self: stretch; } }
+
+
+/* Early navigation and package tiers: clear, honest entry points with coral-led action hierarchy. */
+.hero-actions { flex-wrap: wrap; gap: 0.7rem; }
+.hero-actions .button { min-height: 44px; }
+.button-paper { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.button-paper:hover { background: #fffaf2; color: var(--ink); }
+.button-outline-light { background: transparent; color: var(--paper); border: 1px solid rgba(245,240,232,0.52); }
+.button-outline-light:hover { background: rgba(245,240,232,0.12); border-color: var(--paper); color: var(--paper); }
+.packages-section { padding: 8rem clamp(1.25rem, 6vw, 7rem); background: var(--paper-deep); position: relative; overflow: hidden; }
+.packages-section::before { content: ""; position: absolute; inset: 2rem 5% auto; height: 1px; background: var(--line); }
+.packages-heading { max-width: 620px; margin-bottom: 3.5rem; }
+.packages-heading h2 { margin: 0.8rem 0 1rem; max-width: 9ch; }
+.packages-heading > p:last-child { color: var(--ink-soft); max-width: 50ch; line-height: 1.65; }
+.package-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; position: relative; z-index: 1; }
+.package-card { min-height: 455px; padding: 1.35rem; display: flex; flex-direction: column; border: 1px solid var(--line); box-shadow: 0 16px 34px rgba(16,35,62,0.08); transition: transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out); }
+.package-card:hover { transform: translateY(-5px); box-shadow: 0 22px 45px rgba(16,35,62,0.14); }
+.package-paper { background: #fffaf2; color: var(--ink); }
+.package-blue { background: var(--blue); color: var(--paper); border-color: transparent; }
+.package-coral { background: var(--coral); color: var(--ink); border-color: transparent; }
+.package-navy { background: var(--ink); color: var(--paper); border-color: transparent; }
+.package-topline { display: flex; justify-content: space-between; gap: 0.5rem; padding-bottom: 1rem; border-bottom: 1px solid currentColor; opacity: 0.82; font: 700 0.65rem/1 Manrope, sans-serif; letter-spacing: 0.13em; text-transform: uppercase; }
+.package-note { margin: 2.5rem 0 0.55rem; font: 700 0.68rem/1.25 Manrope, sans-serif; letter-spacing: 0.09em; text-transform: uppercase; opacity: 0.68; }
+.package-card h3 { margin: 0; font: 800 clamp(2rem, 3vw, 3.15rem)/0.95 Sora, sans-serif; letter-spacing: -0.08em; }
+.package-copy { min-height: 86px; margin: 1.1rem 0 1.25rem; line-height: 1.55; opacity: 0.82; }
+.package-card ul { display: grid; gap: 0.75rem; margin: 0; padding: 1rem 0 1.5rem; list-style: none; border-top: 1px solid currentColor; opacity: 0.9; }
+.package-card li { display: flex; gap: 0.55rem; align-items: flex-start; font-size: 0.88rem; line-height: 1.4; }
+.package-card li svg { flex: 0 0 auto; margin-top: 0.15rem; color: var(--coral); }
+.package-blue li svg, .package-navy li svg { color: var(--chartreuse); }
+.package-cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 0.75rem; width: 100%; margin-top: auto; padding: 0.85rem 0; border: 0; border-top: 1px solid currentColor; background: transparent; color: inherit; font: 700 0.73rem/1 Manrope, sans-serif; letter-spacing: 0.08em; text-align: left; text-transform: uppercase; }
+.package-cta:hover { color: var(--coral); }
+@media (max-width: 1100px) { .package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .packages-section { padding: 5rem 1.15rem; } .package-grid { grid-template-columns: 1fr; } .package-card { min-height: 0; } .package-copy { min-height: 0; } .hero-actions { align-items: stretch; } .hero-actions .button { flex: 1 1 100%; justify-content: space-between; } }
