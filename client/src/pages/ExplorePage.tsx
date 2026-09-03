@@ -1,5 +1,5 @@
 /* Style reminder: Editorial Growth Ledger — this is the second static home screen: spacious, practical, and clearly navigational without a carousel or sliding interaction. */
-import { ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Contact, Info, Layers3, LockKeyhole, Sparkles, Users } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Contact, Globe2, Info, Layers3, ListChecks, LockKeyhole, Route, Sparkles, Users } from "lucide-react";
 import { Link } from "wouter";
 
 const destinations = [
@@ -13,6 +13,11 @@ const studioLinks = [
   { label: "Team", copy: "Meet Abhishek, Yash, and Himanshu.", href: "/studio#team", icon: Users },
   { label: "Contact", copy: "Send an enquiry or reach the team directly.", href: "/studio#contact", icon: Contact },
   { label: "Founder Console", copy: "Open Work to access project management.", href: "/studio#work", icon: LockKeyhole },
+  { label: "Method", copy: "See the three-part operating approach.", href: "/studio#signal", icon: Route },
+  { label: "Trust", copy: "Inspect the honest proof section.", href: "/studio#trust", icon: ListChecks },
+  { label: "Global Reach", copy: "Explore the local-to-global visual.", href: "/studio#global", icon: Globe2 },
+  { label: "Journey", copy: "Walk through the studio process.", href: "/studio#journey", icon: Sparkles },
+  { label: "FAQ", copy: "Get practical answers before enquiry.", href: "/studio#faq", icon: Info },
 ];
 
 export default function ExplorePage() {

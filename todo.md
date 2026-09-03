@@ -139,3 +139,10 @@
 - [x] Confirm existing About, Team, Contact, and Founder Console targets.
 - [x] Add visible buttons for those destinations to the Explore screen.
 - [x] Validate the button layout and navigation targets on desktop/mobile, then save a checkpoint.
+
+## Complete Explore studio directory
+
+- [x] Audit all existing public section and navigation targets.
+- [x] Add every relevant destination to the Explore screen alongside Past Work, Services, and Packages.
+- [x] Organize the directory for clear discovery on desktop and mobile.
+- [x] Validate all Explore links and save a checkpoint.
