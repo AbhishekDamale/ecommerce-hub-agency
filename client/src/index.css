@@ -995,3 +995,16 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .compact-footer a:hover { color: var(--coral); }
 @media (max-width: 850px) { .compact-screen-hero { grid-template-columns: 1fr; } .compact-hero-art { width: min(100%, 520px); justify-self: start; margin-top: 1rem; } .compact-destination-grid { grid-template-columns: 1fr; margin-top: 2.5rem; } .compact-destination { min-height: 250px; } }
 @media (max-width: 600px) { .compact-header { padding: 0.7rem 1rem; } .compact-explore-link { font-size: 0.56rem; } .compact-screen { padding: 7rem 1.15rem 4rem; } .compact-screen-hero { min-height: auto; padding-top: 8rem; } .compact-hero-copy h1 { font-size: clamp(3.3rem, 15vw, 5.2rem); } .compact-hero-actions { align-items: stretch; } .compact-hero-actions .button { width: 100%; justify-content: space-between; } .compact-proof-line { margin-top: 2rem; } .compact-art-label { left: 0; } .compact-art-stamp { right: 0; } .compact-footer { align-items: flex-start; flex-direction: column; } }
+
+
+/* Explore studio directory: secondary links stay distinct from the three primary detail destinations. */
+.explore-studio-links { padding: 6rem clamp(1.15rem, 7vw, 8rem); background: #eee4d7; }
+.studio-links-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.8rem; margin-top: 3rem; }
+.studio-link-card { min-height: 185px; padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between; color: var(--ink); text-decoration: none; background: rgba(255,250,242,0.72); border: 1px solid rgba(16,35,62,0.18); transition: transform 180ms var(--ease-out), background-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out); }
+.studio-link-card:hover { transform: translateY(-5px); background: #fffaf2; box-shadow: 0 18px 35px rgba(16,35,62,0.12); }
+.studio-link-card > div { display: flex; align-items: center; gap: 0.6rem; font: 800 0.7rem/1 Manrope, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+.studio-link-card > div svg { color: var(--coral); }
+.studio-link-card p { max-width: 22ch; margin: 1.5rem 0; color: var(--ink-soft); font: 500 0.84rem/1.5 Manrope, sans-serif; }
+.studio-link-card > svg { align-self: flex-end; color: var(--coral); }
+@media (max-width: 950px) { .studio-links-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .explore-studio-links { padding: 4rem 1.15rem; } .studio-links-grid { grid-template-columns: 1fr; margin-top: 2rem; } .studio-link-card { min-height: 145px; } }

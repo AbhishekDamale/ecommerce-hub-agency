@@ -133,3 +133,9 @@
 - [x] Remove the long scrolling sections from the first-visit homepage route without deleting the existing detail pages.
 - [x] Keep Past Work, Services, and Packages as separate pages opened by buttons.
 - [x] Validate the compact landing page and separate routes on desktop/mobile, then save a checkpoint.
+
+## Restored Explore navigation
+
+- [x] Confirm existing About, Team, Contact, and Founder Console targets.
+- [x] Add visible buttons for those destinations to the Explore screen.
+- [x] Validate the button layout and navigation targets on desktop/mobile, then save a checkpoint.
