@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import CompactHome from "./pages/CompactHome";
 import { PackagesPage, PastWorkPage, ServicesPage } from "./pages/DetailPages";
 import ExplorePage from "./pages/ExplorePage";
+import TeamPage from "./pages/TeamPage";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path={"/"} component={CompactHome} />
       <Route path={"/studio"} component={Home} />
       <Route path={"/explore"} component={ExplorePage} />
+      <Route path={"/team"} component={TeamPage} />
       <Route path={"/work"} component={PastWorkPage} />
       <Route path={"/services"} component={ServicesPage} />
       <Route path={"/packages"} component={PackagesPage} />

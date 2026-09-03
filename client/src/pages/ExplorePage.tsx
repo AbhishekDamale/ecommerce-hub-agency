@@ -10,7 +10,7 @@ const destinations = [
 
 const studioLinks = [
   { label: "About", copy: "Read the studio story and how we work.", href: "/studio#about", icon: Info },
-  { label: "Team", copy: "Meet Abhishek, Yash, and Himanshu.", href: "/studio#team", icon: Users },
+  { label: "Team", copy: "Meet Abhishek, Yash, and Himanshu.", href: "/team", icon: Users },
   { label: "Contact", copy: "Send an enquiry or reach the team directly.", href: "/studio#contact", icon: Contact },
   { label: "Founder Console", copy: "Open Work to access project management.", href: "/studio#work", icon: LockKeyhole },
   { label: "Method", copy: "See the three-part operating approach.", href: "/studio#signal", icon: Route },

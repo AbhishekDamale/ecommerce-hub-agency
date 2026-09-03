@@ -146,3 +146,9 @@
 - [x] Add every relevant destination to the Explore screen alongside Past Work, Services, and Packages.
 - [x] Organize the directory for clear discovery on desktop and mobile.
 - [x] Validate all Explore links and save a checkpoint.
+
+## Dedicated Team page
+
+- [x] Create a Team page route with all three team members and their provided details.
+- [x] Add profile contact/social actions and clear Past Work, Services, and Packages buttons.
+- [x] Validate the Team page on desktop/mobile and save a checkpoint.
