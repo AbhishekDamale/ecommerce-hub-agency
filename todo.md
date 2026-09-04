@@ -152,3 +152,9 @@
 - [x] Create a Team page route with all three team members and their provided details.
 - [x] Add profile contact/social actions and clear Past Work, Services, and Packages buttons.
 - [x] Validate the Team page on desktop/mobile and save a checkpoint.
+
+## Navigation repair
+
+- [x] Make the Team destination clearly visible in the Explore Screen 2 primary section.
+- [x] Repair the Explore Screen 2 and Start a conversation buttons so they navigate correctly.
+- [x] Verify the repaired links on desktop and mobile, then save a checkpoint.

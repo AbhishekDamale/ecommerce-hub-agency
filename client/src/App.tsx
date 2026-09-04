@@ -9,11 +9,20 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { useEffect } from "react";
 import Home from "./pages/Home";
 import CompactHome from "./pages/CompactHome";
 import { PackagesPage, PastWorkPage, ServicesPage } from "./pages/DetailPages";
 import ExplorePage from "./pages/ExplorePage";
 import TeamPage from "./pages/TeamPage";
+
+function ContactRoute() {
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => document.getElementById("contact")?.scrollIntoView({ behavior: "auto", block: "start" }));
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
+  return <Home />;
+}
 
 function Router() {
   return (
@@ -25,7 +34,7 @@ function Router() {
       <Route path={"/work"} component={PastWorkPage} />
       <Route path={"/services"} component={ServicesPage} />
       <Route path={"/packages"} component={PackagesPage} />
-      <Route path={"/contact"} component={Home} />
+      <Route path={"/contact"} component={ContactRoute} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
