@@ -1054,3 +1054,13 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 
 /* Reliable landing points for the compact screen controls and studio enquiry CTAs. */
 #explore, #contact { scroll-margin-top: 84px; }
+
+
+/* Compact homepage header navigation: keep the white strip useful, scannable, and responsive. */
+.compact-header-links { display: flex; align-items: center; justify-content: flex-end; gap: clamp(0.7rem, 1.7vw, 1.45rem); }
+.compact-header-links > a:not(.compact-explore-link) { position: relative; padding: 0.45rem 0; color: var(--ink); font: 800 0.62rem/1 Manrope, sans-serif; letter-spacing: 0.08em; text-decoration: none; text-transform: uppercase; }
+.compact-header-links > a:not(.compact-explore-link)::after { content: ""; position: absolute; right: 100%; bottom: 0; left: 0; height: 2px; background: var(--coral); transition: right 180ms var(--ease-out); }
+.compact-header-links > a:not(.compact-explore-link):hover { color: var(--coral); }
+.compact-header-links > a:not(.compact-explore-link):hover::after { right: 0; }
+@media (max-width: 1040px) { .compact-header-links { gap: 0.65rem; } .compact-header-links > a:not(.compact-explore-link) { font-size: 0.56rem; letter-spacing: 0.04em; } }
+@media (max-width: 780px) { .compact-header { gap: 0.7rem; } .compact-header-links > a:not(.compact-explore-link) { display: none; } .compact-header-links { margin-left: auto; } }

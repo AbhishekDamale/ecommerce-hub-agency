@@ -158,3 +158,9 @@
 - [x] Make the Team destination clearly visible in the Explore Screen 2 primary section.
 - [x] Repair the Explore Screen 2 and Start a conversation buttons so they navigate correctly.
 - [x] Verify the repaired links on desktop and mobile, then save a checkpoint.
+
+## White header navigation restoration
+
+- [x] Inspect the compact homepage white header and identify the missing navigation controls.
+- [x] Restore visible header buttons with working destinations and responsive mobile behavior.
+- [x] Verify the header on desktop/mobile, then save a checkpoint.
