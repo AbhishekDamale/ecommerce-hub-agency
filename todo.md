@@ -182,3 +182,9 @@
 - [x] Confirm the Hero uses the requested exact headline, subheadline, CTA labels, and trust statement.
 - [x] Refine only the Hero typography, spacing, CTA prominence, responsiveness, and subtle entrance sequencing.
 - [x] Verify the isolated Hero across desktop, tablet, and mobile, then save a checkpoint.
+
+## Hero right-side visual enhancement
+
+- [x] Inspect and preserve the current Hero right-side image/layout while identifying the safe animation layer.
+- [x] Add a premium digital-ecosystem animation with UI cards, product cues, shapes, glow, lines, particles, depth, parallax, and accessibility/mobile safeguards.
+- [x] Verify the enhanced visual on desktop and mobile, then save a checkpoint.
