@@ -164,3 +164,9 @@
 - [x] Inspect the compact homepage white header and identify the missing navigation controls.
 - [x] Restore visible header buttons with working destinations and responsive mobile behavior.
 - [x] Verify the header on desktop/mobile, then save a checkpoint.
+
+## Hero Section redesign
+
+- [x] Replace only the compact homepage Hero Section copy with the requested headline, subheadline, CTAs, and trust line.
+- [x] Apply premium responsive hierarchy, spacing, visual balance, and restrained entrance animation without changing other sections.
+- [x] Verify desktop, tablet, and mobile Hero layouts, then save a checkpoint.

@@ -1064,3 +1064,20 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .compact-header-links > a:not(.compact-explore-link):hover::after { right: 0; }
 @media (max-width: 1040px) { .compact-header-links { gap: 0.65rem; } .compact-header-links > a:not(.compact-explore-link) { font-size: 0.56rem; letter-spacing: 0.04em; } }
 @media (max-width: 780px) { .compact-header { gap: 0.7rem; } .compact-header-links > a:not(.compact-explore-link) { display: none; } .compact-header-links { margin-left: auto; } }
+
+
+/* Compact Hero redesign: premium digital-agency hierarchy only; the Explore screen below remains unchanged. */
+.compact-hero-copy-premium { max-width: 680px; }
+.compact-hero-title { max-width: 11ch; margin: 1.35rem 0 1.5rem; color: var(--paper); font: 800 clamp(3.55rem, 6.35vw, 7.35rem)/0.9 Sora, sans-serif; letter-spacing: -0.105em; }
+.compact-hero-title em { color: var(--coral); font-style: normal; }
+.compact-hero-subheadline { max-width: 620px; margin: 0; color: rgba(245,240,232,0.74); font: 500 clamp(1rem, 1.35vw, 1.2rem)/1.65 Manrope, sans-serif; }
+.compact-hero-actions-premium { gap: 0.75rem; margin-top: 2.15rem; }
+.compact-hero-actions-premium .button { min-height: 3.15rem; padding: 0.85rem 1.2rem; }
+.compact-hero-secondary { border-color: rgba(245,240,232,0.55); background: transparent; color: var(--paper); }
+.compact-hero-secondary:hover { border-color: var(--chartreuse); background: var(--chartreuse); color: var(--ink); box-shadow: 5px 5px 0 var(--coral); }
+.compact-hero-trust { display: block; margin: 1.2rem 0 0; color: rgba(245,240,232,0.6); font: 700 0.68rem/1.4 Manrope, sans-serif; letter-spacing: 0.04em; }
+.compact-hero-trust span { display: inline-block; margin: 0 0.35rem; color: var(--chartreuse); font-size: 0.95rem; }
+@media (max-width: 1050px) { .compact-hero-title { font-size: clamp(3.25rem, 7vw, 5.7rem); } .compact-hero-subheadline { max-width: 540px; } }
+@media (max-width: 850px) { .compact-hero-copy-premium { max-width: 720px; } .compact-hero-title { max-width: 10ch; } .compact-hero-art { margin-top: 2.5rem; } }
+@media (max-width: 600px) { .compact-hero-title { max-width: 10ch; margin-top: 1rem; font-size: clamp(3rem, 13.8vw, 5.1rem); line-height: 0.9; } .compact-hero-subheadline { font-size: 0.96rem; line-height: 1.6; } .compact-hero-actions-premium { display: grid; gap: 0.65rem; margin-top: 1.65rem; } .compact-hero-actions-premium .button { width: 100%; justify-content: space-between; } .compact-hero-trust { max-width: 30ch; margin-top: 1rem; font-size: 0.62rem; } }
+@media (prefers-reduced-motion: reduce) { .compact-hero-secondary { transition: none; } }
