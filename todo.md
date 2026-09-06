@@ -176,3 +176,9 @@
 - [x] Add a lightweight animated visual background behind the Hero content without changing other sections.
 - [x] Add slow floating shapes, translucent UI cards, glow, particles, flowing lines, and pointer parallax with reduced-motion/mobile safeguards.
 - [x] Verify Hero readability and performance across desktop, tablet, and mobile, then save a checkpoint.
+
+## Hero refinement pass
+
+- [x] Confirm the Hero uses the requested exact headline, subheadline, CTA labels, and trust statement.
+- [x] Refine only the Hero typography, spacing, CTA prominence, responsiveness, and subtle entrance sequencing.
+- [x] Verify the isolated Hero across desktop, tablet, and mobile, then save a checkpoint.

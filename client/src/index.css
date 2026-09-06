@@ -1136,3 +1136,14 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 @media (max-width: 850px) { .compact-hero-ambient { opacity: 0.62; } .ambient-ui-card-three, .ambient-orbit-two { display: none; } .ambient-geo-diamond { left: 70%; top: 42%; width: 5rem; height: 5rem; } .ambient-ui-card-one { top: 58%; right: 7%; } .ambient-ui-card-two { top: 66%; left: 12%; } }
 @media (max-width: 600px) { .compact-hero-ambient { opacity: 0.48; } .ambient-grid { opacity: 0.15; background-size: 46px 46px; } .ambient-flow-lines { inset: 22% -30% 8%; width: 160%; height: 58%; } .ambient-glow { filter: blur(48px); opacity: 0.09; } .ambient-geo-diamond { top: 48%; left: 78%; width: 4rem; height: 4rem; } .ambient-ui-card-one { top: 70%; right: -1rem; transform: rotate(8deg) scale(0.8); } .ambient-ui-card-two { top: 76%; left: -1rem; transform: rotate(-8deg) scale(0.72); } .ambient-particle:nth-child(n+7) { display: none; } }
 @media (prefers-reduced-motion: reduce) { .ambient-grid, .ambient-glow, .ambient-flow-lines, .ambient-orbit, .ambient-geo, .ambient-ui-card, .ambient-particle { animation: none; } .ambient-parallax { transform: none !important; } }
+
+
+/* Hero refinement pass: improve conversion hierarchy without affecting the rest of the site. */
+.compact-hero-copy-premium { max-width: 700px; }
+.compact-hero-title { margin-top: 1.15rem; margin-bottom: 1.7rem; }
+.compact-hero-subheadline { max-width: 600px; }
+.compact-hero-actions-premium .button { min-height: 3.3rem; padding-inline: 1.3rem; }
+.compact-hero-actions-premium .button-coral { min-width: 10rem; }
+.compact-hero-secondary { min-width: 10.6rem; }
+.compact-hero-trust { margin-top: 1.35rem; }
+@media (max-width: 600px) { .compact-hero-copy-premium { max-width: none; } .compact-hero-title { margin-top: 1rem; margin-bottom: 1.35rem; } .compact-hero-actions-premium .button, .compact-hero-actions-premium .button-coral, .compact-hero-secondary { min-width: 0; min-height: 3.15rem; } .compact-hero-trust { margin-top: 1rem; } }
