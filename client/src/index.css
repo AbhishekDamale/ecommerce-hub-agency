@@ -1081,3 +1081,58 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 @media (max-width: 850px) { .compact-hero-copy-premium { max-width: 720px; } .compact-hero-title { max-width: 10ch; } .compact-hero-art { margin-top: 2.5rem; } }
 @media (max-width: 600px) { .compact-hero-title { max-width: 10ch; margin-top: 1rem; font-size: clamp(3rem, 13.8vw, 5.1rem); line-height: 0.9; } .compact-hero-subheadline { font-size: 0.96rem; line-height: 1.6; } .compact-hero-actions-premium { display: grid; gap: 0.65rem; margin-top: 1.65rem; } .compact-hero-actions-premium .button { width: 100%; justify-content: space-between; } .compact-hero-trust { max-width: 30ch; margin-top: 1rem; font-size: 0.62rem; } }
 @media (prefers-reduced-motion: reduce) { .compact-hero-secondary { transition: none; } }
+
+
+/* Hero ambient background: lightweight CSS/SVG atmosphere with subtle Framer Motion pointer depth. */
+.compact-screen-hero { position: relative; overflow: hidden; isolation: isolate; }
+.compact-hero-ambient { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; opacity: 0.82; }
+.compact-hero-copy-premium, .compact-hero-art { position: relative; z-index: 2; }
+.ambient-grid { position: absolute; inset: -20%; opacity: 0.26; background-image: linear-gradient(rgba(245,240,232,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(245,240,232,0.06) 1px, transparent 1px); background-size: 64px 64px; transform: perspective(650px) rotateX(62deg) translateY(24%); transform-origin: center bottom; animation: ambientGridDrift 26s ease-in-out infinite alternate; mask-image: linear-gradient(to bottom, transparent 0%, black 45%, transparent 100%); }
+.ambient-glow { position: absolute; width: 30rem; height: 30rem; border-radius: 50%; filter: blur(70px); opacity: 0.12; animation: ambientGlow 18s ease-in-out infinite alternate; }
+.ambient-glow-coral { top: -13rem; left: 31%; background: var(--coral); }
+.ambient-glow-blue { right: -14rem; bottom: -15rem; background: var(--blue); animation-delay: -7s; }
+.ambient-flow-lines { position: absolute; inset: 12% -8% 0; width: 116%; height: 78%; fill: none; stroke: rgba(217,242,92,0.26); stroke-width: 1.2; stroke-dasharray: 8 20; animation: ambientLines 30s linear infinite; }
+.ambient-flow-lines path + path { stroke: rgba(245,240,232,0.18); stroke-width: 0.8; stroke-dasharray: 4 24; animation: ambientLines 38s linear infinite reverse; }
+.ambient-parallax { position: absolute; inset: 0; will-change: transform; }
+.ambient-parallax-back { opacity: 0.7; }
+.ambient-parallax-front { opacity: 0.86; }
+.ambient-orbit { position: absolute; width: 22rem; height: 9rem; border: 1px solid rgba(245,240,232,0.16); border-radius: 50%; transform: rotate(-23deg); animation: ambientOrbit 18s ease-in-out infinite; }
+.ambient-orbit-one { top: 13%; right: 8%; }
+.ambient-orbit-two { top: 20%; right: 1%; width: 30rem; height: 12rem; border-color: rgba(255,90,78,0.2); transform: rotate(27deg); animation-delay: -8s; }
+.ambient-geo { position: absolute; border: 1px solid rgba(217,242,92,0.45); background: linear-gradient(135deg, rgba(217,242,92,0.18), rgba(33,85,214,0.05)); box-shadow: inset 12px -12px 30px rgba(255,90,78,0.08), 0 18px 60px rgba(33,85,214,0.1); transform-style: preserve-3d; }
+.ambient-geo-diamond { top: 17%; left: 47%; width: 7rem; height: 7rem; transform: rotate(34deg) skew(-7deg, -7deg); animation: ambientDiamond 22s ease-in-out infinite; }
+.ambient-ui-card { position: absolute; display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; width: 8.2rem; height: 5.5rem; padding: 0.75rem; border: 1px solid rgba(245,240,232,0.3); background: linear-gradient(135deg, rgba(245,240,232,0.17), rgba(245,240,232,0.04)); box-shadow: 0 22px 65px rgba(0,0,0,0.18); backdrop-filter: blur(14px); transform-style: preserve-3d; }
+.ambient-ui-card::before { content: ""; grid-column: 1 / -1; width: 42%; height: 0.22rem; background: var(--coral); opacity: 0.9; }
+.ambient-ui-card span { display: block; height: 0.3rem; background: rgba(245,240,232,0.54); }
+.ambient-ui-card span + span { width: 65%; background: rgba(217,242,92,0.66); }
+.ambient-ui-card i { display: block; height: 1.5rem; border: 1px solid rgba(245,240,232,0.2); background: rgba(245,240,232,0.08); }
+.ambient-ui-card b { display: block; height: 0.3rem; background: rgba(255,90,78,0.72); }
+.ambient-ui-card-one { top: 48%; right: 9%; transform: rotate(10deg); animation: ambientCardFloat 13s ease-in-out infinite; }
+.ambient-ui-card-two { top: 65%; left: 43%; transform: rotate(-11deg); animation: ambientCardFloat 15s ease-in-out -4s infinite reverse; }
+.ambient-ui-card-three { top: 24%; right: 43%; width: 6.1rem; height: 4rem; padding: 0.55rem; grid-template-columns: 0.7fr 1fr; transform: rotate(17deg); animation: ambientCardFloat 17s ease-in-out -8s infinite; }
+.ambient-ui-card-three::before { height: 0.16rem; }
+.ambient-ui-card-three i { height: 1rem; }
+.ambient-particles { position: absolute; inset: 0; }
+.ambient-particle { position: absolute; width: 0.25rem; height: 0.25rem; border-radius: 50%; background: var(--chartreuse); box-shadow: 0 0 14px rgba(217,242,92,0.75); animation: ambientParticle 9s ease-in-out infinite; }
+.ambient-particle:nth-child(1) { top: 22%; left: 12%; animation-delay: -1s; }
+.ambient-particle:nth-child(2) { top: 34%; left: 37%; width: 0.18rem; height: 0.18rem; animation-delay: -5s; }
+.ambient-particle:nth-child(3) { top: 62%; left: 28%; animation-delay: -3s; }
+.ambient-particle:nth-child(4) { top: 76%; left: 53%; width: 0.16rem; height: 0.16rem; animation-delay: -7s; }
+.ambient-particle:nth-child(5) { top: 18%; left: 72%; animation-delay: -6s; }
+.ambient-particle:nth-child(6) { top: 48%; left: 82%; width: 0.18rem; height: 0.18rem; animation-delay: -2s; }
+.ambient-particle:nth-child(7) { top: 81%; left: 86%; animation-delay: -4s; }
+.ambient-particle:nth-child(8) { top: 14%; left: 56%; width: 0.16rem; height: 0.16rem; animation-delay: -8s; }
+.ambient-particle:nth-child(9) { top: 53%; left: 7%; animation-delay: -6.5s; }
+.ambient-particle:nth-child(10) { top: 69%; left: 68%; width: 0.18rem; height: 0.18rem; animation-delay: -1.7s; }
+.ambient-particle:nth-child(11) { top: 30%; left: 91%; animation-delay: -4.8s; }
+.ambient-particle:nth-child(12) { top: 87%; left: 39%; width: 0.16rem; height: 0.16rem; animation-delay: -7.5s; }
+@keyframes ambientGridDrift { from { transform: perspective(650px) rotateX(62deg) translate3d(-1%, 22%, 0); } to { transform: perspective(650px) rotateX(62deg) translate3d(1%, 27%, 0); } }
+@keyframes ambientGlow { from { transform: translate3d(-5%, 2%, 0) scale(0.94); } to { transform: translate3d(7%, -4%, 0) scale(1.08); } }
+@keyframes ambientLines { from { transform: translate3d(-1%, 0, 0); stroke-dashoffset: 0; } to { transform: translate3d(2%, -1%, 0); stroke-dashoffset: -180; } }
+@keyframes ambientOrbit { 0%, 100% { transform: rotate(-23deg) translate3d(0, 0, 0); opacity: 0.48; } 50% { transform: rotate(-15deg) translate3d(-18px, 10px, 0); opacity: 0.85; } }
+@keyframes ambientDiamond { 0%, 100% { transform: rotate(34deg) skew(-7deg, -7deg) translate3d(0, 0, 0); } 50% { transform: rotate(47deg) skew(-7deg, -7deg) translate3d(13px, -18px, 18px); } }
+@keyframes ambientCardFloat { 0%, 100% { translate: 0 0; } 50% { translate: -10px -16px; } }
+@keyframes ambientParticle { 0%, 100% { opacity: 0.28; transform: translate3d(0, 0, 0) scale(0.8); } 50% { opacity: 0.96; transform: translate3d(8px, -15px, 0) scale(1.35); } }
+@media (max-width: 850px) { .compact-hero-ambient { opacity: 0.62; } .ambient-ui-card-three, .ambient-orbit-two { display: none; } .ambient-geo-diamond { left: 70%; top: 42%; width: 5rem; height: 5rem; } .ambient-ui-card-one { top: 58%; right: 7%; } .ambient-ui-card-two { top: 66%; left: 12%; } }
+@media (max-width: 600px) { .compact-hero-ambient { opacity: 0.48; } .ambient-grid { opacity: 0.15; background-size: 46px 46px; } .ambient-flow-lines { inset: 22% -30% 8%; width: 160%; height: 58%; } .ambient-glow { filter: blur(48px); opacity: 0.09; } .ambient-geo-diamond { top: 48%; left: 78%; width: 4rem; height: 4rem; } .ambient-ui-card-one { top: 70%; right: -1rem; transform: rotate(8deg) scale(0.8); } .ambient-ui-card-two { top: 76%; left: -1rem; transform: rotate(-8deg) scale(0.72); } .ambient-particle:nth-child(n+7) { display: none; } }
+@media (prefers-reduced-motion: reduce) { .ambient-grid, .ambient-glow, .ambient-flow-lines, .ambient-orbit, .ambient-geo, .ambient-ui-card, .ambient-particle { animation: none; } .ambient-parallax { transform: none !important; } }
