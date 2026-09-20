@@ -811,7 +811,6 @@ h1 em, h2 em, .founders-word em { color: var(--coral); font-style: normal; }
 .founder-card-navy .founder-card-top { border-color: rgba(245,240,232,0.28); }
 .founder-card-navy .founder-card-bottom p { color: rgba(245,240,232,0.72); }
 .founder-card-navy .founder-photo::after { background: linear-gradient(180deg, rgba(16,35,62,0.02), rgba(16,35,62,0.72)); }
-.founder-photo-himanshu img { object-position: center 18%; }
 .founder-detail-navy { background: var(--ink); color: var(--paper); }
 .founder-detail-navy .founder-detail-copy > p:not(.founder-detail-role) { color: rgba(245,240,232,0.74); }
 .founder-detail-navy .founder-detail-facts { border-color: rgba(245,240,232,0.22); }

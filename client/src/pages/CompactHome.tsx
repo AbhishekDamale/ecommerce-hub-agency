@@ -11,7 +11,7 @@ const destinations = [
   { number: "01", label: "Past Work", title: "Proof with a pulse.", copy: "Open the client archive and inspect the first three live project chapters.", href: "/work", icon: BriefcaseBusiness, tone: "coral" },
   { number: "02", label: "Services", title: "Clear services. Useful movement.", copy: "See every capability e_commerce.hub brings to businesses and startups.", href: "/services", icon: Sparkles, tone: "blue" },
   { number: "03", label: "Packages", title: "Choose your starting point.", copy: "Compare Basic, High Level, Advance, and Premium scopes.", href: "/packages", icon: Layers3, tone: "navy" },
-  { number: "04", label: "Team", title: "Meet the people behind it.", copy: "See Abhishek, Yash, and Himanshu building the next move together.", href: "/team", icon: Users, tone: "coral" },
+  { number: "04", label: "Team", title: "Meet the people behind it.", copy: "Meet Abhishek and Yash, the founders building the next move together.", href: "/team", icon: Users, tone: "coral" },
 ];
 
 export default function CompactHome() {
